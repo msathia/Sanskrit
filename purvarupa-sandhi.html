@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पूर्वरूपसन्धिः Notes</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #1d252c;
+            --muted: #5f6b76;
+            --line: #d9e0e6;
+            --paper: #fbfaf7;
+            --panel: #ffffff;
+            --soft-blue: #e8f1f6;
+            --soft-green: #e9f3ee;
+            --soft-gold: #f5edd8;
+            --accent: #245c73;
+            --shadow: 0 12px 28px rgba(29, 37, 44, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.55;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        header {
+            background: #173344;
+            color: #f8fbfc;
+            border-bottom: 5px solid #d2a64b;
+        }
+
+        .wrap {
+            width: min(980px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.95rem;
+        }
+
+        nav a {
+            color: #eef6f8;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            padding: 42px 0 40px;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: 2.35rem;
+            line-height: 1.1;
+        }
+
+        .lede {
+            max-width: 760px;
+            color: #dce9ee;
+            font-size: 1.08rem;
+            margin: 0;
+        }
+
+        main {
+            padding: 34px 0 64px;
+        }
+
+        section {
+            margin: 0 0 34px;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 1.55rem;
+            color: #243847;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+            color: #22313d;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
+        .section-note {
+            margin: 0 0 20px;
+            max-width: 760px;
+            color: var(--muted);
+        }
+
+        .card {
+            min-width: 0;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .rule-card {
+            background: var(--soft-green);
+            box-shadow: none;
+        }
+
+        .contrast-card {
+            background: var(--soft-blue);
+            box-shadow: none;
+        }
+
+        .note-card {
+            background: var(--soft-gold);
+            box-shadow: none;
+        }
+
+        .rule {
+            margin: 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(29, 37, 44, 0.08);
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+            font-size: 0.94rem;
+            line-height: 1.55;
+            white-space: pre;
+        }
+
+        .sanskrit {
+            font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Kohinoor Devanagari", serif;
+        }
+
+        .split {
+            display: grid;
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .split-step {
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .split-step p {
+            margin: 0 0 8px;
+        }
+
+        footer {
+            padding: 24px 0 36px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 780px) {
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px 12px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.78rem;
+            }
+
+            .lede {
+                max-width: 28ch;
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .wrap {
+                width: min(294px, calc(100% - 32px));
+                margin-left: 16px;
+                margin-right: auto;
+            }
+
+            .section-note {
+                max-width: 28ch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <div class="topbar">
+                <div class="brand">Sanskrit Study Notes</div>
+                <nav aria-label="Main navigation">
+                    <a href="index.html">Overview</a>
+                    <a href="index.html#sandhi">Sandhi</a>
+                    <a href="yantavant-sandhi.html">यान्तवान्त</a>
+                    <a href="Sandhi.md">Markdown Notes</a>
+                    <a href="Workflow.md">Workflow</a>
+                </nav>
+            </div>
+            <div class="intro">
+                <h1 lang="sa-Deva">पूर्वरूपसन्धिः</h1>
+                <p class="lede">Notes for the special case where final ए or ओ meets short अ. The short अ disappears and
+                    is marked with अवग्रहः.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap">
+            <h2>Rule</h2>
+            <article class="card rule-card">
+                <h3 lang="sa-Deva">पूर्वरूपसन्धिः</h3>
+                <pre class="rule sanskrit" lang="sa-Deva">ए + short अ -> एऽ
+ओ + short अ -> ओऽ</pre>
+                <p class="section-note">The sign <span class="sanskrit" lang="sa-Deva">ऽ</span> is called <span
+                        class="sanskrit" lang="sa-Deva">अवग्रहः</span> (avagrahaḥ). It marks that the following short
+                    <span class="sanskrit" lang="sa-Deva">अ</span> has disappeared.</p>
+            </article>
+        </section>
+
+        <section class="wrap">
+            <h2>Practical Distinction</h2>
+            <article class="card contrast-card">
+                <pre class="rule sanskrit" lang="sa-Deva">ए + अ -> एऽ        पूर्वरूपसन्धिः
+ओ + अ -> ओऽ        पूर्वरूपसन्धिः
+
+ऐ + अ -> आय् + अ    यान्तवान्तसन्धिः
+औ + अ -> आव् + अ    यान्तवान्तसन्धिः</pre>
+                <p class="section-note">This is why <span class="sanskrit" lang="sa-Deva">सर्वे + अपि</span> becomes
+                    <span class="sanskrit" lang="sa-Deva">सर्वेऽपि</span>, but <span class="sanskrit"
+                        lang="sa-Deva">राजानौ + अपालयताम्</span> becomes <span class="sanskrit"
+                        lang="sa-Deva">राजानावपालयताम्</span>. The first ends in <span class="sanskrit"
+                        lang="sa-Deva">ए</span>; the second ends in <span class="sanskrit" lang="sa-Deva">औ</span>, not
+                    <span class="sanskrit" lang="sa-Deva">ओ</span>.</p>
+            </article>
+        </section>
+
+        <section class="wrap">
+            <h2>Examples</h2>
+            <div class="split">
+                <article class="split-step">
+                    <h3 lang="sa-Deva">सर्वेऽपि</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">सर्वे + अपि
+ए + अ -> एऽ
+...र्वे + अ...
+-> ...र्वेऽ...
+-> सर्वेऽपि</pre>
+                    <p>All also; all too.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">तेऽपि</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">ते + अपि
+ए + अ -> एऽ
+...ते + अ...
+-> ...तेऽ...
+-> तेऽपि</pre>
+                    <p>They also; those also.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">कोऽपि</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">को + अपि
+ओ + अ -> ओऽ
+को + अपि
+-> कोऽपि</pre>
+                    <p>Someone; anyone.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">गुरोऽत्र</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">गुरो + अत्र
+ओ + अ -> ओऽ
+...रो + अ...
+-> ...रोऽ...
+-> गुरोऽत्र</pre>
+                    <p>O teacher, here.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">हरेऽत्र</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">हरे + अत्र
+ए + अ -> एऽ
+...रे + अ...
+-> ...रेऽ...
+-> हरेऽत्र</pre>
+                    <p>O Hari, here. In study notes, prefer <span class="sanskrit" lang="sa-Deva">हरेऽत्र</span>; without
+                        अवग्रहः it may look like <span class="sanskrit" lang="sa-Deva">हरेत्र</span>.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">अहोऽद्भुतम्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">अहो + अद्भुतम्
+ओ + अ -> ओऽ
+...हो + अ...
+-> ...होऽ...
+-> अहोऽद्भुतम्</pre>
+                    <p>Ah, wonderful; oh, amazing. Use <span class="sanskrit" lang="sa-Deva">अहोऽद्भुतम्</span>, not
+                        <span class="sanskrit" lang="sa-Deva">अहोद्भुतम्</span>, when marking this sandhi.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">राजानावपालयताम्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">राजानौ + अपालयताम्
+औ + अ -> आव् + अ
+...नौ + अ...
+-> ...नाव् + अ...
+-> राजानावपालयताम्</pre>
+                    <p>Contrast example: this is यान्तवान्तसन्धिः because <span class="sanskrit"
+                            lang="sa-Deva">राजानौ</span> ends in <span class="sanskrit" lang="sa-Deva">औ</span>, not
+                        <span class="sanskrit" lang="sa-Deva">ओ</span>.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h2>Reading Tip</h2>
+            <article class="card note-card">
+                <p>When you see <span class="sanskrit" lang="sa-Deva">ऽ</span>, restore a short <span class="sanskrit"
+                        lang="sa-Deva">अ</span> at that point while splitting the words.</p>
+                <pre class="rule sanskrit" lang="sa-Deva">सर्वेऽपि -> सर्वे + अपि
+कोऽपि -> को + अपि
+अहोऽद्भुतम् -> अहो + अद्भुतम्</pre>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            Back to <a href="index.html">overview</a>. See also <a href="yantavant-sandhi.html">यान्तवान्तसन्धिः</a>.
+            These are original study notes; private course material is intentionally excluded.
+        </div>
+    </footer>
+</body>
+
+</html>

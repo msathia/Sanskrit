@@ -188,6 +188,10 @@
             background: #eef2ec;
         }
 
+        .rule-card:nth-child(6) {
+            background: #f4efe7;
+        }
+
         .rule {
             margin: 0;
             padding: 12px;
@@ -413,14 +417,29 @@
 
                 <article class="card rule-card">
                     <h3><a href="yantavant-sandhi.html">यान्तवान्तसन्धिः</a></h3>
-                    <pre class="rule">ए + vowel -> अय् + vowel
+                    <pre class="rule">ए + vowel, except short अ -> अय् + vowel
 ऐ + vowel -> आय् + vowel
-ओ + vowel -> अव् + vowel
+ओ + vowel, except short अ -> अव् + vowel
 औ + vowel -> आव् + vowel</pre>
                     <ul class="example-list">
                         <li>द्वौ + अपि -> द्वावपि</li>
                         <li>सर्वे + आगताः -> सर्वयागताः</li>
+                        <li>ए/ओ + short अ uses <a href="purvarupa-sandhi.html">पूर्वरूपसन्धिः</a></li>
                         <li><a href="yantavant-sandhi.html">Story words and meanings</a></li>
+                    </ul>
+                </article>
+
+                <article class="card rule-card">
+                    <h3><a href="purvarupa-sandhi.html">पूर्वरूपसन्धिः</a></h3>
+                    <pre class="rule">ए + short अ -> एऽ
+ओ + short अ -> ओऽ
+ऽ marks the dropped अ</pre>
+                    <ul class="example-list">
+                        <li>सर्वे + अपि -> सर्वेऽपि</li>
+                        <li>ते + अपि -> तेऽपि</li>
+                        <li>को + अपि -> कोऽपि</li>
+                        <li>गुरो + अत्र -> गुरोऽत्र</li>
+                        <li><a href="purvarupa-sandhi.html">Practical distinction and examples</a></li>
                     </ul>
                 </article>
             </div>
@@ -495,7 +514,8 @@
 
     <footer>
         <div class="wrap">
-            Source notes: <a href="Sandhi.md">Sandhi.md</a>, <a href="yantavant-sandhi.html">Detailed example notes</a>,
+            Source notes: <a href="Sandhi.md">Sandhi.md</a>, <a href="yantavant-sandhi.html">यान्तवान्त notes</a>,
+            <a href="purvarupa-sandhi.html">पूर्वरूप notes</a>,
             <a href="SanskritNotes.md">SanskritNotes.md</a>, and
             <a href="Workflow.md">Workflow.md</a>. Private course material is intentionally excluded.
         </div>
