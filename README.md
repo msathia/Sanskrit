@@ -1,15 +1,20 @@
+# Sanskrit
 
-A curated collection of Sanskrit learning resources organized in an easy-to-navigate format.
+Static Sanskrit study notes and public learning resources.
 
-[View the organized resources here](index.html)
+The GitHub Pages site is intended to live at:
 
+```text
+https://msathia.github.io/Sanskrit/
+```
 
+## Contents
 
+- `index.html` - public static page with Sandhi notes and learning resources.
+- `Sandhi.md` - push-safe Sandhi grammar notes.
+- `SanskritNotes.md` - compact learning context and session notes.
+- `Workflow.md` - terminal, tmux, and screenshot workflow notes.
 
+## Material Policy
 
-
-
-
-
-
-
+Paid or copyrighted course files are not tracked here. PDFs, images, screenshots, course-material directories, and private material folders are ignored by `.gitignore`.
