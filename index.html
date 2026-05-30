@@ -81,11 +81,8 @@
         }
 
         .intro {
-            display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-            gap: 32px;
+            max-width: 760px;
             padding: 46px 0 42px;
-            align-items: center;
         }
 
         h1 {
@@ -103,20 +100,6 @@
             color: #dce9ee;
             font-size: 1.08rem;
             margin: 0;
-        }
-
-        .script-sample {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            padding: 22px;
-        }
-
-        .script-sample p {
-            margin: 0;
-            font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Kohinoor Devanagari", serif;
-            font-size: 1.65rem;
-            line-height: 1.7;
         }
 
         main {
@@ -151,7 +134,6 @@
             gap: 16px;
         }
 
-        .intro > *,
         .card {
             min-width: 0;
         }
@@ -272,11 +254,6 @@
                 width: min(1120px, calc(100% - 96px));
             }
 
-            .topbar,
-            .intro {
-                grid-template-columns: 1fr;
-            }
-
             .topbar {
                 align-items: flex-start;
                 flex-direction: column;
@@ -300,10 +277,6 @@
             .lede {
                 max-width: 28ch;
                 font-size: 0.98rem;
-            }
-
-            .script-sample p {
-                font-size: 1.45rem;
             }
 
             .grid,
@@ -338,18 +311,13 @@
                 </nav>
             </div>
             <div class="intro">
-                <div>
-                    <h1><span class="title-line">Practical Sanskrit</span> <span class="title-line">grammar notes</span></h1>
-                    <p class="lede">A compact, push-safe notebook for learning Sanskrit grammar, beginning with vowel
-                        sandhi. These notes are original summaries and examples, separate from private course material.</p>
-                    <div class="meta" aria-label="Study context">
-                        <span class="pill">Pravesika 2 focus</span>
-                        <span class="pill">Devanagari-first</span>
-                        <span class="pill">Static GitHub Pages site</span>
-                    </div>
-                </div>
-                <div class="script-sample" lang="sa-Deva" aria-label="Sanskrit rendering sample">
-                    <p>यान्तवान्तसन्धिः<br>पूर्वरूपसन्धिः<br>पररूपसन्धिः<br>प्रकृतिभावः</p>
+                <h1><span class="title-line">Practical Sanskrit</span> <span class="title-line">grammar notes</span></h1>
+                <p class="lede">A compact, push-safe notebook for learning Sanskrit grammar, beginning with vowel
+                    sandhi. These notes are original summaries and examples, separate from private course material.</p>
+                <div class="meta" aria-label="Study context">
+                    <span class="pill">Pravesika 2 focus</span>
+                    <span class="pill">Devanagari-first</span>
+                    <span class="pill">Static GitHub Pages site</span>
                 </div>
             </div>
         </div>
