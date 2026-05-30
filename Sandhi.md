@@ -109,3 +109,89 @@ Examples:
 ```
 
 Reading trick: if a form has `य्`, `व्`, or `र्` between two vowel sounds, check whether it may have come from `इ/ई`, `उ/ऊ`, or `ऋ/ॠ` before a vowel. If the two vowels are same-family, first check सवर्णदीर्घसन्धिः.
+
+### यान्तवान्तसन्धिः
+
+यान्तवान्तसन्धिः is a vowel-sandhi rule where final `ए`, `ऐ`, `ओ`, or `औ` changes before another vowel.
+
+Rule table:
+
+```text
+ए + vowel, except short अ -> अय् + vowel
+ऐ + vowel -> आय् + vowel
+ओ + vowel, except short अ -> अव् + vowel
+औ + vowel -> आव् + vowel
+```
+
+Examples:
+
+```text
+द्वौ + अपि -> द्वावपि
+सर्वे + आगताः -> सर्वयागताः
+मुक्त्यै + एव -> मुक्त्यायेव
+राजानौ + अपि -> राजानावपि
+```
+
+Important exception: `ए/ओ + short अ` uses पूर्वरूपसन्धिः, not यान्तवान्तसन्धिः.
+
+### Special Cases
+
+These rules are useful because they block or override an expected general vowel-sandhi rule.
+
+#### पूर्वरूपसन्धिः
+
+```text
+ए + short अ -> एऽ
+ओ + short अ -> ओऽ
+```
+
+`ऽ` is called अवग्रहः. It marks that the following short `अ` has disappeared.
+
+Examples:
+
+```text
+हरे + अत्र -> हरेऽत्र
+विष्णो + अत्र -> विष्णोऽत्र
+अहो + अद्भुतम् -> अहोऽद्भुतम्
+```
+
+#### पररूपसन्धिः
+
+In special prefix-like contexts, the later vowel remains instead of the expected वृद्धि form.
+
+```text
+प्र + एधते -> प्रेधते
+```
+
+Expected by वृद्धिसन्धिः:
+
+```text
+प्र + एधते -> प्रैधते
+```
+
+Actual by पररूपसन्धिः:
+
+```text
+प्र + एधते -> प्रेधते
+```
+
+#### प्रकृतिभावः
+
+प्रकृतिभावः means the original form is kept. Expected sandhi is blocked.
+
+Story examples:
+
+```text
+द्वे + अपि -> द्वे अपि
+मती + एते -> मती एते
+श्रीपते३ + अत्र -> श्रीपते३ अत्र
+```
+
+Practice examples:
+
+```text
+हरी + एतौ -> हरी एतौ
+विष्णू + इमौ -> विष्णू इमौ
+गङ्गे + अमू -> गङ्गे अमू
+वन्देते + इमौ -> वन्देते इमौ
+```
