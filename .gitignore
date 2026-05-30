@@ -1,0 +1,35 @@
+# Keep private/course materials out of Git if they are ever copied here.
+*.pdf
+*.ppt
+*.pptx
+*.doc
+*.docx
+*.png
+*.jpg
+*.jpeg
+*.heic
+*.tiff
+*.mp3
+*.mp4
+*.m4a
+*.mov
+*.zip
+
+# Explicit course-material guards.
+Samskrata Pravesika-*/
+Samskrta Pravesika-*/
+Sanskrita Pravesika-*/
+Pravesika-*/
+Madras Sanskrit College/
+MSC/
+msc/
+
+materials/
+course-materials/
+external/
+private/
+paid/
+screenshots/
+tmp/
+
+.DS_Store
