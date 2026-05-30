@@ -32,4 +32,7 @@ paid/
 screenshots/
 tmp/
 
+# Local session handoff/context notes. Keep private; repo is public.
+SanskritNotes.md
+
 .DS_Store
