@@ -56,7 +56,7 @@ Current Pravesika 2 local lesson sequence:
 - Near-term grammar themes: sandhi, passive/impersonal constructions, participles/gerundive suffixes, interrogative words.
 - Keep notes independent: write our own summaries, examples, and doubts rather than copying course slides.
 - Push-safe topic notes: [Sandhi.md](Sandhi.md)
-- Detailed rendered notes: [yantavant-sandhi.html](yantavant-sandhi.html), [purvarupa-sandhi.html](purvarupa-sandhi.html)
+- Detailed rendered notes: [yantavant-sandhi.html](yantavant-sandhi.html), [sandhi-special-cases.html](sandhi-special-cases.html)
 - Study workflow notes: [Workflow.md](Workflow.md)
 
 ## Grammar Notes
@@ -88,5 +88,5 @@ Current Pravesika 2 local lesson sequence:
 - Created this notebook structure.
 - Added learner profile, source inventory, and working rules for private course materials.
 - Added a separate rendered page for story words under यान्तवान्तसन्धिः.
-- Added rendered notes for पूर्वरूपसन्धिः: ए/ओ + short अ use अवग्रहः; ऐ/औ + अ remain यान्तवान्तसन्धिः.
+- Added rendered special-case notes for पूर्वरूपसन्धिः, पररूपसन्धिः, and प्रकृतिभावः.
 - Next: continue from current Pravesika 2 lesson and summarize only the durable grammar points.

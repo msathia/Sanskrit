@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>पूर्वरूपसन्धिः Notes</title>
+    <title>अच्सन्धिः Special Cases</title>
     <style>
         :root {
             color-scheme: light;
@@ -242,16 +242,16 @@
                 </nav>
             </div>
             <div class="intro">
-                <h1 lang="sa-Deva">पूर्वरूपसन्धिः</h1>
-                <p class="lede">Notes for the special case where final ए or ओ meets short अ. The short अ disappears and
-                    is marked with अवग्रहः.</p>
+                <h1 lang="sa-Deva">अच्सन्धिः Special Cases</h1>
+                <p class="lede">Exceptions and blocked sandhi cases from the story: पूर्वरूपसन्धिः, पररूपसन्धिः, and
+                    प्रकृतिभावः.</p>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="wrap">
-            <h2>Rule</h2>
+        <section class="wrap" id="purvarupa">
+            <h2 lang="sa-Deva">पूर्वरूपसन्धिः</h2>
             <article class="card rule-card">
                 <h3 lang="sa-Deva">पूर्वरूपसन्धिः</h3>
                 <pre class="rule sanskrit" lang="sa-Deva">ए + short अ -> एऽ
@@ -333,6 +333,17 @@
                 </article>
 
                 <article class="split-step">
+                    <h3 lang="sa-Deva">विष्णोऽत्र</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">विष्णो + अत्र
+ओ + अ -> ओऽ
+...ष्णो + अ...
+-> ...ष्णोऽ...
+-> विष्णोऽत्र</pre>
+                    <p>O Vishnu, here. This is another story example where अवग्रहः marks the dropped short <span
+                            class="sanskrit" lang="sa-Deva">अ</span>.</p>
+                </article>
+
+                <article class="split-step">
                     <h3 lang="sa-Deva">अहोऽद्भुतम्</h3>
                     <pre class="rule sanskrit" lang="sa-Deva">अहो + अद्भुतम्
 ओ + अ -> ओऽ
@@ -366,6 +377,137 @@
 कोऽपि -> को + अपि
 अहोऽद्भुतम् -> अहो + अद्भुतम्</pre>
             </article>
+        </section>
+
+        <section class="wrap" id="pararupa">
+            <h2 lang="sa-Deva">पररूपसन्धिः</h2>
+            <article class="card rule-card">
+                <h3>Later Form Wins</h3>
+                <p class="section-note">In special prefix-like contexts, the expected वृद्धिसन्धिः is blocked and the
+                    later vowel remains. This is why it feels like an exception to the regular वृद्धि rule.</p>
+                <pre class="rule sanskrit" lang="sa-Deva">अ + ए -> ए
+अ + ओ -> ओ</pre>
+            </article>
+
+            <div class="split">
+                <article class="split-step">
+                    <h3 lang="sa-Deva">प्रेधते</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">प्र + एधते
+अ + ए -> ए
+
+Expected by वृद्धिसन्धिः:
+प्र + एधते -> प्रैधते
+
+Actual by पररूपसन्धिः:
+प्र + एधते -> प्रेधते</pre>
+                    <p>In the story: <span class="sanskrit" lang="sa-Deva">तस्य तपसः तीक्ष्णता प्रेधते</span> means
+                        “the intensity of his penance increases.”</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap" id="prakritibhava">
+            <h2 lang="sa-Deva">प्रकृतिभावः</h2>
+            <article class="card rule-card">
+                <h3>Original Form Is Kept</h3>
+                <p class="section-note">Here the expected sandhi is blocked. The word remains in its original form,
+                    often because the form is dual or because a calling form has a pluta vowel.</p>
+            </article>
+
+            <div class="split">
+                <article class="split-step">
+                    <h3 lang="sa-Deva">द्वे अपि</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">द्वे + अपि
+
+Expected by पूर्वरूपसन्धिः:
+ए + अ -> एऽ
+द्वे + अपि -> द्वेऽपि
+
+Actual by प्रकृतिभावः:
+द्वे + अपि -> द्वे अपि</pre>
+                    <p>Meaning: “both also.” Here <span class="sanskrit" lang="sa-Deva">द्वे</span> is a dual form.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">मती एते</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">मती + एते
+
+Expected by यण्सन्धिः:
+ई + ए -> य् + ए
+मती + एते -> मत्येते
+
+Actual by प्रकृतिभावः:
+मती + एते -> मती एते</pre>
+                    <p>Meaning: “these two thoughts.” Here <span class="sanskrit" lang="sa-Deva">मती</span> is a dual
+                        form.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">श्रीपते३ अत्र</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">श्रीपते३ + अत्र
+
+Expected by पूर्वरूपसन्धिः:
+ए + अ -> एऽ
+श्रीपते + अत्र -> श्रीपतेऽत्र
+
+Actual by प्रकृतिभावः:
+श्रीपते३ + अत्र -> श्रीपते३ अत्र</pre>
+                    <p>Meaning: “O Lord of Lakshmi, come here.” The <span class="sanskrit" lang="sa-Deva">३</span>
+                        marks a prolonged calling vowel, so the form is kept.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">हरी एतौ</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">हरी + एतौ
+
+Expected by यण्सन्धिः:
+ई + ए -> य् + ए
+हरी + एतौ -> हर्येतौ
+
+Actual by प्रकृतिभावः:
+हरी + एतौ -> हरी एतौ</pre>
+                    <p>Practice example: dual form ending in <span class="sanskrit" lang="sa-Deva">ई</span>.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">विष्णू इमौ</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">विष्णू + इमौ
+
+Expected by यण्सन्धिः:
+ऊ + इ -> व् + इ
+विष्णू + इमौ -> विष्ण्विमौ
+
+Actual by प्रकृतिभावः:
+विष्णू + इमौ -> विष्णू इमौ</pre>
+                    <p>Practice example: dual form ending in <span class="sanskrit" lang="sa-Deva">ऊ</span>.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">गङ्गे अमू</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">गङ्गे + अमू
+
+Expected by पूर्वरूपसन्धिः:
+ए + अ -> एऽ
+गङ्गे + अमू -> गङ्गेऽमू
+
+Actual by प्रकृतिभावः:
+गङ्गे + अमू -> गङ्गे अमू</pre>
+                    <p>Practice example: dual form ending in <span class="sanskrit" lang="sa-Deva">ए</span>.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">वन्देते इमौ</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">वन्देते + इमौ
+
+Expected by यान्तवान्तसन्धिः:
+ए + इ -> अय् + इ
+वन्देते + इमौ -> वन्देतयिमौ
+
+Actual by प्रकृतिभावः:
+वन्देते + इमौ -> वन्देते इमौ</pre>
+                    <p>Practice example: dual verb form ending in <span class="sanskrit" lang="sa-Deva">ए</span>.</p>
+                </article>
+            </div>
         </section>
     </main>
 
