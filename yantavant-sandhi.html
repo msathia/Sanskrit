@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>यान्तवान्तसन्धिः Story Words</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #1d252c;
+            --muted: #5f6b76;
+            --line: #d9e0e6;
+            --paper: #fbfaf7;
+            --panel: #ffffff;
+            --soft-blue: #e8f1f6;
+            --soft-green: #e9f3ee;
+            --soft-gold: #f5edd8;
+            --accent: #245c73;
+            --accent-2: #7a5222;
+            --shadow: 0 12px 28px rgba(29, 37, 44, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.55;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        header {
+            background: #173344;
+            color: #f8fbfc;
+            border-bottom: 5px solid #d2a64b;
+        }
+
+        .wrap {
+            width: min(980px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.95rem;
+        }
+
+        nav a {
+            color: #eef6f8;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            padding: 42px 0 40px;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: 2.35rem;
+            line-height: 1.1;
+        }
+
+        .lede {
+            max-width: 760px;
+            color: #dce9ee;
+            font-size: 1.08rem;
+            margin: 0;
+        }
+
+        main {
+            padding: 34px 0 64px;
+        }
+
+        section {
+            margin: 0 0 34px;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 1.55rem;
+            color: #243847;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+            color: #22313d;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
+        .section-note {
+            margin: 0 0 20px;
+            max-width: 760px;
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            min-width: 0;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .rule-card {
+            background: var(--soft-green);
+            box-shadow: none;
+        }
+
+        .word-card {
+            background: var(--soft-blue);
+            box-shadow: none;
+        }
+
+        .caution-card {
+            background: var(--soft-gold);
+            box-shadow: none;
+        }
+
+        .rule,
+        .script-line {
+            margin: 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(29, 37, 44, 0.08);
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+            font-size: 0.94rem;
+            line-height: 1.55;
+            white-space: pre;
+        }
+
+        .sanskrit {
+            font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Kohinoor Devanagari", serif;
+        }
+
+        .large-example {
+            margin: 0;
+            font-size: 1.8rem;
+            line-height: 1.7;
+            color: #243847;
+            overflow-wrap: anywhere;
+        }
+
+        .split {
+            display: grid;
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .split-step {
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .split-step p {
+            margin: 0 0 8px;
+        }
+
+        .compact-list {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: var(--muted);
+        }
+
+        .compact-list li + li {
+            margin-top: 7px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        th {
+            background: #edf3f6;
+            color: #243847;
+            font-weight: 700;
+        }
+
+        footer {
+            padding: 24px 0 36px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 780px) {
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px 12px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.78rem;
+            }
+
+            .lede {
+                max-width: 28ch;
+                font-size: 0.98rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .large-example {
+                font-size: 1.45rem;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .wrap {
+                width: min(294px, calc(100% - 32px));
+                margin-left: 16px;
+                margin-right: auto;
+            }
+
+            .section-note {
+                max-width: 28ch;
+            }
+
+            th,
+            td {
+                padding: 9px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <div class="topbar">
+                <div class="brand">Sanskrit Study Notes</div>
+                <nav aria-label="Main navigation">
+                    <a href="index.html">Overview</a>
+                    <a href="index.html#sandhi">Sandhi</a>
+                    <a href="Sandhi.md">Markdown Notes</a>
+                    <a href="Workflow.md">Workflow</a>
+                </nav>
+            </div>
+            <div class="intro">
+                <h1 lang="sa-Deva">यान्तवान्तसन्धिः</h1>
+                <p class="lede">Story words formed when final ए, ऐ, ओ, or औ changes before another vowel. Each entry
+                    keeps only the split, sound change, final form, and English meaning.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap">
+            <h2>Rule</h2>
+            <article class="card rule-card">
+                <h3 lang="sa-Deva">यान्तवान्तसन्धिः</h3>
+                <pre class="rule sanskrit" lang="sa-Deva">ए + vowel -> अय् + vowel
+ऐ + vowel -> आय् + vowel
+ओ + vowel -> अव् + vowel
+औ + vowel -> आव् + vowel</pre>
+            </article>
+        </section>
+
+        <section class="wrap">
+            <h2>Story Words</h2>
+            <div class="split">
+                <article class="split-step">
+                    <h3 lang="sa-Deva">राजानावपालयताम्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">राजानौ + अपालयताम्
+औ + अ -> आव् + अ
+...नौ + अ...
+-> ...नाव् + अ...
+-> राजानावपालयताम्</pre>
+                    <p>The two kings ruled or protected.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">द्वावपि</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">द्वौ + अपि
+औ + अ -> आव् + अ
+...द्वौ + अ...
+-> ...द्वाव् + अ...
+-> द्वावपि</pre>
+                    <p>Both; the two also.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">बुद्धिमन्ताविति</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">बुद्धिमन्तौ + इति
+औ + इ -> आव् + इ
+...न्तौ + इ...
+-> ...न्ताव् + इ...
+-> बुद्धिमन्ताविति</pre>
+                    <p>“The two are intelligent,” thus; called intelligent.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">राजानावनवधानयुक्तौ</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">राजानौ + अनवधानयुक्तौ
+औ + अ -> आव् + अ
+...नौ + अ...
+-> ...नाव् + अ...
+-> राजानावनवधानयुक्तौ</pre>
+                    <p>The two kings, inattentive or careless.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">अनवधानयुक्तावास्ताम्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">अनवधानयुक्तौ + आस्ताम्
+औ + आ -> आव् + आ
+...क्तौ + आ...
+-> ...क्ताव् + आ...
+-> अनवधानयुक्तावास्ताम्</pre>
+                    <p>The two were inattentive or careless.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">सन्तावास्ताम्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">सन्तौ + आस्ताम्
+औ + आ -> आव् + आ
+...न्तौ + आ...
+-> ...न्ताव् + आ...
+-> सन्तावास्ताम्</pre>
+                    <p>The two were present or were existing.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">सर्वयागताः</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">सर्वे + आगताः
+ए + आ -> अय् + आ
+...र्वे + आ...
+-> ...र्वय् + आ...
+-> सर्वयागताः</pre>
+                    <p>All came; all arrived.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">मुक्त्यायेव</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">मुक्त्यै + एव
+ऐ + ए -> आय् + ए
+...त्यै + ए...
+-> ...त्याय् + ए...
+-> मुक्त्यायेव</pre>
+                    <p>For liberation alone; only for liberation.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">अज्ञाताविव</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">अज्ञातौ + इव
+औ + इ -> आव् + इ
+...तौ + इ...
+-> ...ताव् + इ...
+-> अज्ञाताविव</pre>
+                    <p>As if unknown or unrecognized.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">उपविशन्तावास्ताम्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">उपविशन्तौ + आस्ताम्
+औ + आ -> आव् + आ
+...न्तौ + आ...
+-> ...न्ताव् + आ...
+-> उपविशन्तावास्ताम्</pre>
+                    <p>The two were sitting.</p>
+                </article>
+
+                <article class="split-step">
+                    <h3 lang="sa-Deva">राजानावपि</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">राजानौ + अपि
+औ + अ -> आव् + अ
+...नौ + अ...
+-> ...नाव् + अ...
+-> राजानावपि</pre>
+                    <p>The two kings also; even the two kings.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            Back to <a href="index.html">overview</a>. These are original study notes; private course material is
+            intentionally excluded.
+        </div>
+    </footer>
+</body>
+
+</html>

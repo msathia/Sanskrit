@@ -11,6 +11,7 @@ https://msathia.github.io/Sanskrit/
 ## Contents
 
 - `index.html` - public static page with Sandhi notes and learning resources.
+- `yantavant-sandhi.html` - detailed rendered story-word notes for यान्तवान्तसन्धिः.
 - `Sandhi.md` - push-safe Sandhi grammar notes.
 - `SanskritNotes.md` - compact learning context and session notes.
 - `Workflow.md` - terminal, tmux, and screenshot workflow notes.
