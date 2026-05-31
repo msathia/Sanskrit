@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शतृ-शानच् Notes</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #1d252c;
+            --muted: #5f6b76;
+            --line: #d9e0e6;
+            --paper: #fbfaf7;
+            --panel: #ffffff;
+            --soft-blue: #e8f1f6;
+            --soft-green: #e9f3ee;
+            --soft-gold: #f5edd8;
+            --accent: #245c73;
+            --shadow: 0 12px 28px rgba(29, 37, 44, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.55;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        header {
+            background: #173344;
+            color: #f8fbfc;
+            border-bottom: 5px solid #d2a64b;
+        }
+
+        .wrap {
+            width: min(980px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.95rem;
+        }
+
+        nav a {
+            color: #eef6f8;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            padding: 42px 0 40px;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: 2.35rem;
+            line-height: 1.1;
+        }
+
+        .lede {
+            max-width: 760px;
+            color: #dce9ee;
+            font-size: 1.08rem;
+            margin: 0;
+        }
+
+        main {
+            padding: 34px 0 64px;
+        }
+
+        section {
+            margin: 0 0 34px;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 1.55rem;
+            color: #243847;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+            color: #22313d;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
+        .section-note {
+            margin: 0 0 20px;
+            max-width: 760px;
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            min-width: 0;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .rule-card {
+            background: var(--soft-green);
+            box-shadow: none;
+        }
+
+        .note-card {
+            background: var(--soft-blue);
+            box-shadow: none;
+        }
+
+        .memory-card {
+            background: var(--soft-gold);
+            box-shadow: none;
+        }
+
+        .rule {
+            margin: 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(29, 37, 44, 0.08);
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+            font-size: 0.94rem;
+            line-height: 1.55;
+            white-space: pre;
+        }
+
+        .sanskrit {
+            font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Kohinoor Devanagari", serif;
+        }
+
+        .split {
+            display: grid;
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .split-step {
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .compact-list {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: var(--muted);
+        }
+
+        .compact-list li + li {
+            margin-top: 7px;
+        }
+
+        footer {
+            padding: 24px 0 36px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 780px) {
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px 12px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.78rem;
+            }
+
+            .lede {
+                max-width: 28ch;
+                font-size: 0.98rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .wrap {
+                width: min(294px, calc(100% - 32px));
+                margin-left: 16px;
+                margin-right: auto;
+            }
+
+            .section-note {
+                max-width: 28ch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <div class="topbar">
+                <div class="brand">Sanskrit Study Notes</div>
+                <nav aria-label="Main navigation">
+                    <a href="index.html">Overview</a>
+                    <a href="maheshwara-sutras.html">Sutras</a>
+                    <a href="index.html#sandhi">Sandhi</a>
+                    <a href="index.html#lesson8">Lesson 8</a>
+                    <a href="Workflow.md">Workflow</a>
+                </nav>
+            </div>
+            <div class="intro">
+                <h1 lang="sa-Deva">शतृ-शानच्</h1>
+                <p class="lede">Lesson 8 notes for present participles: verb forms such as “singing” or “while doing”
+                    that describe the subject while another action happens.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap">
+            <h2 lang="sa-Deva">लट्लकारः</h2>
+            <p class="section-note">लट्लकारः is the present tense. These forms name the finite action in the sentence.</p>
+            <div class="grid">
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">Present Forms</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">करोति = he/she/it does or makes
+पचति = he/she/it cooks
+गायति = he/she/it sings</pre>
+                    <p>These are <span class="sanskrit" lang="sa-Deva">लट्लकारः, प्रथमपुरुषः, एकवचनम्</span>.</p>
+                </article>
+                <article class="card note-card">
+                    <h3>Person Memory</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">प्रथमपुरुषः = he/she/it/they
+मध्यमपुरुषः = you
+उत्तमपुरुषः = I/we</pre>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h2>Participle Idea</h2>
+            <article class="card memory-card">
+                <p>A participle is a verb-derived form that often works like an adjective. In English, “singing” in
+                    “the singing boy” comes from a verb but describes the boy.</p>
+                <pre class="rule sanskrit" lang="sa-Deva">रामः गायन् पचति।
+Rama cooks while singing.</pre>
+                <p>Here <span class="sanskrit" lang="sa-Deva">गायन्</span> comes from <span class="sanskrit"
+                        lang="sa-Deva">गायति</span>, but it describes <span class="sanskrit"
+                        lang="sa-Deva">रामः</span>.</p>
+            </article>
+        </section>
+
+        <section class="wrap">
+            <h2>Core Transformation</h2>
+            <div class="split">
+                <article class="split-step">
+                    <h3 lang="sa-Deva">रामः गायति पचति च।</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">रामः गायति पचति च।
+= Rama sings and cooks.</pre>
+                </article>
+                <article class="split-step">
+                    <h3 lang="sa-Deva">रामः गायन् पचति।</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">गायति -> गायन्
+रामः गायन् पचति।
+= Rama cooks while singing.</pre>
+                    <p>Tamil intuition: <span lang="ta">ராமன் பாடிக்கொண்டு சமைக்கிறான்.</span></p>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h2 lang="sa-Deva">शतृ / शानच्</h2>
+            <p class="section-note">Both are present participle प्रत्ययाः. They turn a present-tense verb idea into
+                “doing” or “while doing.” The practical distinction comes from the verb class ending.</p>
+            <div class="grid">
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">शतृ</h3>
+                    <p>Used with परस्मैपदी verbs. A quick beginner memory is that many ति-ending present forms use
+                        शतृ.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">परस्मैपदी धातुः -> शतृ
+
+पचति -> पचन्
+गायति -> गायन्
+पठति -> पठन्</pre>
+                </article>
+                <article class="card note-card">
+                    <h3 lang="sa-Deva">शानच्</h3>
+                    <p>Used with आत्मनेपदी verbs. A quick beginner memory is that many ते-ending present forms use
+                        शानच्.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">आत्मनेपदी धातुः -> शानच्
+
+वन्दते -> वन्दमानः
+लभते -> लभमानः
+सेवते -> सेवमानः</pre>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h2>Main Distinction</h2>
+            <article class="card memory-card">
+                <pre class="rule sanskrit" lang="sa-Deva">परस्मैपदी धातुः -> शतृ
+आत्मनेपदी धातुः -> शानच्
+
+ति-ending present forms -> often शतृ
+ते-ending present forms -> often शानच्</pre>
+                <ul class="compact-list">
+                    <li><span class="sanskrit" lang="sa-Deva">गायति / पचति / पठति</span> become <span
+                            class="sanskrit" lang="sa-Deva">गायन् / पचन् / पठन्</span>.</li>
+                    <li><span class="sanskrit" lang="sa-Deva">वन्दते / लभते / सेवते</span> become <span
+                            class="sanskrit" lang="sa-Deva">वन्दमानः / लभमानः / सेवमानः</span>.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="wrap">
+            <h2>Meaning Examples</h2>
+            <div class="split">
+                <article class="split-step">
+                    <h3 lang="sa-Deva">रामः गायन् पचति।</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">गायति -> गायन्
+रामः गायन् पचति।
+= Rama cooks while singing.</pre>
+                </article>
+                <article class="split-step">
+                    <h3 lang="sa-Deva">भक्तः वन्दमानः तिष्ठति।</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">वन्दते -> वन्दमानः
+भक्तः वन्दमानः तिष्ठति।
+= The devotee stands while saluting.</pre>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h2>Quick Memory</h2>
+            <article class="card memory-card">
+                <pre class="rule sanskrit" lang="sa-Deva">ति-ending present forms -> often शतृ
+ते-ending present forms -> often शानच्</pre>
+                <ul class="compact-list">
+                    <li><span class="sanskrit" lang="sa-Deva">गायन्</span> = singing / while singing.</li>
+                    <li><span class="sanskrit" lang="sa-Deva">पचन्</span> = cooking / while cooking.</li>
+                    <li><span class="sanskrit" lang="sa-Deva">वन्दमानः</span> = saluting / while saluting.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            Back to <a href="index.html">overview</a>. These are original study notes; private course material is
+            intentionally excluded.
+        </div>
+    </footer>
+</body>
+
+</html>

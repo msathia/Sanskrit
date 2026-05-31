@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>महेश्वरसूत्राणि Notes</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #1d252c;
+            --muted: #5f6b76;
+            --line: #d9e0e6;
+            --paper: #fbfaf7;
+            --panel: #ffffff;
+            --soft-blue: #e8f1f6;
+            --soft-green: #e9f3ee;
+            --soft-gold: #f5edd8;
+            --accent: #245c73;
+            --shadow: 0 12px 28px rgba(29, 37, 44, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.55;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        header {
+            background: #173344;
+            color: #f8fbfc;
+            border-bottom: 5px solid #d2a64b;
+        }
+
+        .wrap {
+            width: min(980px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.95rem;
+        }
+
+        nav a {
+            color: #eef6f8;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            padding: 42px 0 40px;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: 2.35rem;
+            line-height: 1.1;
+        }
+
+        .lede {
+            max-width: 760px;
+            color: #dce9ee;
+            font-size: 1.08rem;
+            margin: 0;
+        }
+
+        main {
+            padding: 34px 0 64px;
+        }
+
+        section {
+            margin: 0 0 34px;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 1.55rem;
+            color: #243847;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+            color: #22313d;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
+        .section-note {
+            margin: 0 0 20px;
+            max-width: 760px;
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            min-width: 0;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .rule-card {
+            background: var(--soft-green);
+            box-shadow: none;
+        }
+
+        .note-card {
+            background: var(--soft-blue);
+            box-shadow: none;
+        }
+
+        .memory-card {
+            background: var(--soft-gold);
+            box-shadow: none;
+        }
+
+        .rule {
+            margin: 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(29, 37, 44, 0.08);
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+            font-size: 0.94rem;
+            line-height: 1.55;
+            white-space: pre;
+        }
+
+        .sanskrit {
+            font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Kohinoor Devanagari", serif;
+        }
+
+        .compact-list {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: var(--muted);
+        }
+
+        .compact-list li + li {
+            margin-top: 7px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        th {
+            background: #edf3f6;
+            color: #243847;
+            font-weight: 700;
+        }
+
+        footer {
+            padding: 24px 0 36px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 780px) {
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px 12px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.78rem;
+            }
+
+            .lede {
+                max-width: 28ch;
+                font-size: 0.98rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .wrap {
+                width: min(294px, calc(100% - 32px));
+                margin-left: 16px;
+                margin-right: auto;
+            }
+
+            .section-note {
+                max-width: 28ch;
+            }
+
+            th,
+            td {
+                padding: 9px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <div class="topbar">
+                <div class="brand">Sanskrit Study Notes</div>
+                <nav aria-label="Main navigation">
+                    <a href="index.html">Overview</a>
+                    <a href="index.html#sutras">Sutras</a>
+                    <a href="index.html#sandhi">Sandhi</a>
+                    <a href="index.html#lesson8">Lesson 8</a>
+                    <a href="Workflow.md">Workflow</a>
+                </nav>
+            </div>
+            <div class="intro">
+                <h1 lang="sa-Deva">महेश्वरसूत्राणि</h1>
+                <p class="lede">A compact sound-map used to form प्रत्याहाराः such as अच्, हल्, इक्, and यण्. This
+                    page keeps the sutras, marker letters, and the practical meaning of हलन्तशब्दः together.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap">
+            <h2>Core Idea</h2>
+            <div class="grid">
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">प्रत्याहारः</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">start letter + marker letter
+= compact name for a group of sounds</pre>
+                    <p>The final letter of each sutra is an इत् marker. It helps form the group name but is not counted
+                        as a normal sound inside that group.</p>
+                </article>
+                <article class="card note-card">
+                    <h3 lang="sa-Deva">हलन्तशब्दः</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">हल् + अन्तः
+= ending in a consonant</pre>
+                    <p>A हलन्तशब्दः is a consonant-ending word or stem, such as <span class="sanskrit"
+                            lang="sa-Deva">जगत्</span>, <span class="sanskrit" lang="sa-Deva">भवत्</span>, or
+                        <span class="sanskrit" lang="sa-Deva">राजन्</span>.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h2 lang="sa-Deva">१४ सूत्राणि</h2>
+            <p class="section-note">The last sound in each row is the marker. The marker is useful for grammar notation,
+                but it is not part of the sound group being collected.</p>
+            <table aria-label="Maheshwara Sutras">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Sutra</th>
+                        <th>Marker</th>
+                    </tr>
+                </thead>
+                <tbody class="sanskrit" lang="sa-Deva">
+                    <tr>
+                        <td>1</td>
+                        <td>अ इ उ ण्</td>
+                        <td>ण्</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ऋ ऌ क्</td>
+                        <td>क्</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>ए ओ ङ्</td>
+                        <td>ङ्</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ऐ औ च्</td>
+                        <td>च्</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>ह य व र ट्</td>
+                        <td>ट्</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>ल ण्</td>
+                        <td>ण्</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>ञ म ङ ण न म्</td>
+                        <td>म्</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>झ भ ञ्</td>
+                        <td>ञ्</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>घ ढ ध ष्</td>
+                        <td>ष्</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>ज ब ग ड द श्</td>
+                        <td>श्</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>ख फ छ ठ थ च ट त व्</td>
+                        <td>व्</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>क प य्</td>
+                        <td>य्</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>श ष स र्</td>
+                        <td>र्</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>ह ल्</td>
+                        <td>ल्</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="wrap">
+            <h2 lang="sa-Deva">हल्</h2>
+            <p class="section-note">हल् means all consonants. Start at ह in the fifth sutra and go up to the final ल्
+                marker in the fourteenth sutra.</p>
+            <article class="card memory-card">
+                <h3>Maheshwara Sutra Order</h3>
+                <pre class="rule sanskrit" lang="sa-Deva">ह य व र
+ल
+ञ म ङ ण न
+झ भ
+घ ढ ध
+ज ब ग ड द
+ख फ छ ठ थ च ट त
+क प
+श ष स
+ह</pre>
+                <p>The final <span class="sanskrit" lang="sa-Deva">ल्</span> in <span class="sanskrit"
+                        lang="sa-Deva">हल्</span> is the marker. It is not counted there. The consonant <span
+                        class="sanskrit" lang="sa-Deva">ल्</span> is still included because it appears earlier in
+                    <span class="sanskrit" lang="sa-Deva">लण्</span>. The sound <span class="sanskrit"
+                        lang="sa-Deva">ह्</span> appears at both ends of the traversal, but for the normal consonant
+                    list it is counted once.</p>
+            </article>
+        </section>
+
+        <section class="wrap">
+            <h2>Study Grouping</h2>
+            <p class="section-note">For reading and writing, this familiar order is easier to remember than the
+                Maheshwara traversal order.</p>
+            <article class="card note-card">
+                <pre class="rule sanskrit" lang="sa-Deva">क् ख् ग् घ् ङ्
+च् छ् ज् झ् ञ्
+ट् ठ् ड् ढ् ण्
+त् थ् द् ध् न्
+प् फ् ब् भ् म्
+य् र् ल् व्
+श् ष् स् ह्</pre>
+            </article>
+        </section>
+
+        <section class="wrap">
+            <h2>Useful Pratyaharas</h2>
+            <div class="grid">
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">अच्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">अ ... च्
+= अ इ उ ऋ ऌ ए ओ ऐ औ</pre>
+                    <p>All vowels. This is why vowel sandhi is called <span class="sanskrit"
+                            lang="sa-Deva">अच्सन्धिः</span>.</p>
+                </article>
+                <article class="card note-card">
+                    <h3 lang="sa-Deva">इक्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">इ ... क्
+= इ उ ऋ ऌ</pre>
+                    <p>This group is useful when remembering <span class="sanskrit" lang="sa-Deva">यण्सन्धिः</span>.</p>
+                </article>
+                <article class="card memory-card">
+                    <h3 lang="sa-Deva">यण्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">य ... ण्
+= य व र ल</pre>
+                    <p>The semivowels used in यण्सन्धिः: इ -> य्, उ -> व्, ऋ -> र्, ऌ -> ल्.</p>
+                </article>
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">हल्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">ह ... ल्
+= all consonants</pre>
+                    <p>This is the source behind <span class="sanskrit" lang="sa-Deva">हलन्तशब्दः</span>.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            Back to <a href="index.html">overview</a>. See also <a href="yantavant-sandhi.html">यान्तवान्तसन्धिः</a>
+            and <a href="shatru-shanach.html">शतृ-शानच्</a>. These are original study notes; private course material is
+            intentionally excluded.
+        </div>
+    </footer>
+</body>
+
+</html>
