@@ -210,6 +210,10 @@
             font-weight: 700;
         }
 
+        .table-scroll {
+            overflow-x: auto;
+        }
+
         footer {
             padding: 24px 0 36px;
             color: var(--muted);
@@ -391,6 +395,150 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <section class="wrap">
+            <h2>Sound Classification</h2>
+            <p class="section-note">This is the study grouping. It is different from the Maheshwara sutra order, whose
+                main job is to form compact प्रत्याहार names.</p>
+            <div class="table-scroll">
+                <table aria-label="Sound classification">
+                    <thead>
+                        <tr>
+                            <th>Top Level</th>
+                            <th>Class</th>
+                            <th>Sounds</th>
+                            <th>Sutra Memory</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vowels</td>
+                            <td>Simple vowels</td>
+                            <td class="sanskrit" lang="sa-Deva">अ आ, इ ई, उ ऊ, ऋ ॠ, ऌ</td>
+                            <td>The sutras show the short bases: <span class="sanskrit" lang="sa-Deva">अ इ उ ऋ ऌ</span>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Vowels</td>
+                            <td>Diphthongs / compound vowels</td>
+                            <td class="sanskrit" lang="sa-Deva">ए ओ ऐ औ</td>
+                            <td><span class="sanskrit" lang="sa-Deva">ए ओ</span> are गुण vowels; <span
+                                    class="sanskrit" lang="sa-Deva">ऐ औ</span> are वृद्धि vowels.</td>
+                        </tr>
+                        <tr>
+                            <td>Consonants</td>
+                            <td>ह + semivowels</td>
+                            <td class="sanskrit" lang="sa-Deva">ह्, य् र् ल् व्</td>
+                            <td><span class="sanskrit" lang="sa-Deva">हयवरट्</span> and <span class="sanskrit"
+                                    lang="sa-Deva">लण्</span>. Only <span class="sanskrit" lang="sa-Deva">य् र् ल्
+                                    व्</span> are semivowels.</td>
+                        </tr>
+                        <tr>
+                            <td>Consonants</td>
+                            <td>Nasals, 5th of each varga</td>
+                            <td class="sanskrit" lang="sa-Deva">ङ् ञ् ण् न् म्</td>
+                            <td>Sutra order: <span class="sanskrit" lang="sa-Deva">ञ म ङ ण न</span>.</td>
+                        </tr>
+                        <tr>
+                            <td>Consonants</td>
+                            <td>Soft aspirates, 4th of each varga</td>
+                            <td class="sanskrit" lang="sa-Deva">घ् झ् ढ् ध् भ्</td>
+                            <td>Sutra order: <span class="sanskrit" lang="sa-Deva">झ भ</span>, then <span
+                                    class="sanskrit" lang="sa-Deva">घ ढ ध</span>.</td>
+                        </tr>
+                        <tr>
+                            <td>Consonants</td>
+                            <td>Soft unaspirates, 3rd of each varga</td>
+                            <td class="sanskrit" lang="sa-Deva">ग् ज् ड् द् ब्</td>
+                            <td>Sutra order: <span class="sanskrit" lang="sa-Deva">ज ब ग ड द</span>.</td>
+                        </tr>
+                        <tr>
+                            <td>Consonants</td>
+                            <td>Hard aspirates, 2nd of each varga</td>
+                            <td class="sanskrit" lang="sa-Deva">ख् छ् ठ् थ् फ्</td>
+                            <td>Sutra order: <span class="sanskrit" lang="sa-Deva">ख फ छ ठ थ</span>.</td>
+                        </tr>
+                        <tr>
+                            <td>Consonants</td>
+                            <td>Hard unaspirates, 1st of each varga</td>
+                            <td class="sanskrit" lang="sa-Deva">क् च् ट् त् प्</td>
+                            <td>Sutra order: <span class="sanskrit" lang="sa-Deva">च ट त</span>, then <span
+                                    class="sanskrit" lang="sa-Deva">क प</span>.</td>
+                        </tr>
+                        <tr>
+                            <td>Consonants</td>
+                            <td>Sibilants and ह्</td>
+                            <td class="sanskrit" lang="sa-Deva">श् ष् स् ह्</td>
+                            <td><span class="sanskrit" lang="sa-Deva">श ष स र्</span> plus <span class="sanskrit"
+                                    lang="sa-Deva">ह्</span>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h2>Varga Grid</h2>
+            <p class="section-note">Within each consonant class, columns 1 and 2 are hard; columns 3 and 4 are soft; the
+                5th column is nasal. Here hard means voiceless, soft means voiced, and “+ breath” means aspirated or
+                महाप्राण.</p>
+            <div class="table-scroll">
+                <table aria-label="Consonant varga grid">
+                    <thead>
+                        <tr>
+                            <th>Varga</th>
+                            <th>1 Hard</th>
+                            <th>2 Hard + breath</th>
+                            <th>3 Soft</th>
+                            <th>4 Soft + breath</th>
+                            <th>5 Nasal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="sanskrit" lang="sa-Deva">
+                        <tr>
+                            <td>क-वर्गः</td>
+                            <td>क्</td>
+                            <td>ख्</td>
+                            <td>ग्</td>
+                            <td>घ्</td>
+                            <td>ङ्</td>
+                        </tr>
+                        <tr>
+                            <td>च-वर्गः</td>
+                            <td>च्</td>
+                            <td>छ्</td>
+                            <td>ज्</td>
+                            <td>झ्</td>
+                            <td>ञ्</td>
+                        </tr>
+                        <tr>
+                            <td>ट-वर्गः</td>
+                            <td>ट्</td>
+                            <td>ठ्</td>
+                            <td>ड्</td>
+                            <td>ढ्</td>
+                            <td>ण्</td>
+                        </tr>
+                        <tr>
+                            <td>त-वर्गः</td>
+                            <td>त्</td>
+                            <td>थ्</td>
+                            <td>द्</td>
+                            <td>ध्</td>
+                            <td>न्</td>
+                        </tr>
+                        <tr>
+                            <td>प-वर्गः</td>
+                            <td>प्</td>
+                            <td>फ्</td>
+                            <td>ब्</td>
+                            <td>भ्</td>
+                            <td>म्</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section class="wrap">
