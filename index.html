@@ -316,17 +316,18 @@
             <div class="topbar">
                 <div class="brand">Sanskrit Study Notes</div>
                 <nav aria-label="Main navigation">
-                    <a href="#sutras">Sutras</a>
-                    <a href="#sandhi">Sandhi</a>
-                    <a href="#shatru-shanach">शतृ-शानच्</a>
+                    <a href="maheshwara-sutras.html">Sutras</a>
+                    <a href="sandhi.html">Sandhi</a>
+                    <a href="shatru-shanach.html">शतृ-शानच्</a>
                     <a href="#workflow">Workflow</a>
                     <a href="#resources">Resources</a>
                 </nav>
             </div>
             <div class="intro">
                 <h1><span class="title-line">Practical Sanskrit</span> <span class="title-line">grammar notes</span></h1>
-                <p class="lede">A compact, push-safe notebook for learning Sanskrit grammar, beginning with vowel
-                    sandhi. These notes are original summaries and examples, separate from private course material.</p>
+                <p class="lede">A compact, push-safe notebook for learning Sanskrit grammar: sound groups, sandhi rules,
+                    and verb-derived forms. These notes are original summaries and examples, separate from private
+                    course material.</p>
                 <div class="meta" aria-label="Study context">
                     <span class="pill">Pravesika 2 focus</span>
                     <span class="pill">Devanagari-first</span>
@@ -357,118 +358,29 @@
         </section>
 
         <section id="sandhi" class="wrap">
-            <h2>अच्सन्धिः / अच्-सन्धिः</h2>
-            <p class="section-note">अच्सन्धिः means vowel sandhi. It happens when one vowel meets another vowel,
-                usually at a word boundary or inside a compound.</p>
+            <h2>सन्धिः</h2>
+            <p class="section-note">Sound-change rules now live on a dedicated sandhi page. This keeps the Sutras page
+                focused on sound groups and keeps rule applications in one place.</p>
 
             <div class="grid">
                 <article class="card rule-card">
-                    <h3>सवर्णदीर्घसन्धिः</h3>
-                    <p class="sutra-ref">अष्टाध्यायी:
-                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.101.html" target="_blank"
-                            rel="noopener noreferrer">६.१.१०१ अकः सवर्णे दीर्घः</a>
-                    </p>
-                    <pre class="rule">अ + अ / आ -> आ
-इ / ई + इ / ई -> ई
-उ / ऊ + उ / ऊ -> ऊ</pre>
+                    <h3><a href="sandhi.html">Sandhi Rule Hub</a></h3>
+                    <pre class="rule">अच्सन्धिः = vowel sandhi
+विसर्गसन्धिः = visarga sandhi
+हल्सन्धिः = consonant sandhi</pre>
                     <ul class="example-list">
-                        <li>राम + अवतारः -> रामावतारः</li>
-                        <li>गिरि + ईशः -> गिरीशः</li>
-                        <li>गुरु + उपदेशः -> गुरूपदेशः</li>
+                        <li><a href="sandhi.html">Current vowel-sandhi map</a></li>
+                        <li>Visarga sandhi is the next topic area</li>
+                        <li>Consonant sandhi will grow from the हल् sound groups</li>
                     </ul>
                 </article>
-
                 <article class="card rule-card">
-                    <h3>गुणसन्धिः</h3>
-                    <p class="sutra-ref">अष्टाध्यायी:
-                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.87.html" target="_blank"
-                            rel="noopener noreferrer">६.१.८७ आद्गुणः</a>
-                    </p>
-                    <pre class="rule">अ / आ + इ / ई -> ए
-अ / आ + उ / ऊ -> ओ
-अ / आ + ऋ / ॠ -> अर्</pre>
+                    <h3><a href="yantavant-sandhi.html">Current Detail Pages</a></h3>
+                    <pre class="rule">यान्तवान्तसन्धिः
+पूर्वरूप / पररूप / प्रकृतिभाव</pre>
                     <ul class="example-list">
-                        <li>देव + इन्द्रः -> देवेन्द्रः</li>
-                        <li>महा + ईश्वरः -> महेश्वरः</li>
-                        <li>महा + उत्सवः -> महोत्सवः</li>
-                        <li>महा + ऋषिः -> महर्षिः</li>
-                    </ul>
-                </article>
-
-                <article class="card rule-card">
-                    <h3>वृद्धिसन्धिः</h3>
-                    <p class="sutra-ref">अष्टाध्यायी:
-                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.88.html" target="_blank"
-                            rel="noopener noreferrer">६.१.८८ वृद्धिरेचि</a>
-                    </p>
-                    <pre class="rule">अ / आ + ए / ऐ -> ऐ
-अ / आ + ओ / औ -> औ</pre>
-                    <ul class="example-list">
-                        <li>सदा + एव -> सदैव</li>
-                        <li>तथा + एव -> तथैव</li>
-                        <li>महा + ऐश्वर्यम् -> महैश्वर्यम्</li>
-                        <li>महा + औषधम् -> महौषधम्</li>
-                    </ul>
-                </article>
-
-                <article class="card rule-card">
-                    <h3>यण्सन्धिः</h3>
-                    <p class="sutra-ref">अष्टाध्यायी:
-                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.77.html" target="_blank"
-                            rel="noopener noreferrer">६.१.७७ इको यणचि</a>
-                    </p>
-                    <pre class="rule">इ / ई + vowel -> य् + vowel
-उ / ऊ + vowel -> व् + vowel
-ऋ / ॠ + vowel -> र् + vowel
-ऌ + vowel -> ल् + vowel</pre>
-                    <ul class="example-list">
-                        <li>यदि + अपि -> यद्यपि</li>
-                        <li>इति + एवम् -> इत्येवम्</li>
-                        <li>सु + आगतम् -> स्वागतम्</li>
-                        <li>गुरु + आज्ञा -> गुर्वाज्ञा</li>
-                        <li>पितृ + आदेशः -> पित्रादेशः</li>
-                    </ul>
-                </article>
-
-                <article class="card rule-card">
-                    <h3><a href="yantavant-sandhi.html">यान्तवान्तसन्धिः</a></h3>
-                    <p class="sutra-ref">अष्टाध्यायी:
-                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.78.html" target="_blank"
-                            rel="noopener noreferrer">६.१.७८ एचोऽयवायावः</a>
-                    </p>
-                    <pre class="rule">ए + vowel, except short अ -> अय् + vowel
-ऐ + vowel -> आय् + vowel
-ओ + vowel, except short अ -> अव् + vowel
-औ + vowel -> आव् + vowel</pre>
-                    <ul class="example-list">
-                        <li>द्वौ + अपि -> द्वावपि</li>
-                        <li>सर्वे + आगताः -> सर्वयागताः</li>
-                        <li>ए/ओ + short अ uses <a href="sandhi-special-cases.html#purvarupa">पूर्वरूपसन्धिः</a></li>
-                        <li><a href="yantavant-sandhi.html">Story words and meanings</a></li>
-                    </ul>
-                </article>
-
-                <article class="card rule-card">
-                    <h3><a href="sandhi-special-cases.html">Special Cases</a></h3>
-                    <p class="sutra-ref">अष्टाध्यायी:
-                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.109.html" target="_blank"
-                            rel="noopener noreferrer">६.१.१०९ एङः पदान्तादति</a>,
-                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.89.html" target="_blank"
-                            rel="noopener noreferrer">६.१.८९ एत्येधत्यूठ्सु</a>,
-                        <a href="https://ashtadhyayi-lite.github.io/sutra/1.1.11.html" target="_blank"
-                            rel="noopener noreferrer">१.१.११ ईदूदेद्द्विवचनं प्रगृह्यम्</a>,
-                        <a href="https://avg-sanskrit.org/sutras/6-1-125.html" target="_blank"
-                            rel="noopener noreferrer">६.१.१२५ प्लुतप्रगृह्या अचि</a>
-                    </p>
-                    <pre class="rule">ए + short अ -> एऽ
-ओ + short अ -> ओऽ
-अ + ए -> ए
-ऽ marks the dropped अ</pre>
-                    <ul class="example-list">
-                        <li><a href="sandhi-special-cases.html#purvarupa">पूर्वरूपसन्धिः</a>: हरे + अत्र -> हरेऽत्र</li>
-                        <li><a href="sandhi-special-cases.html#pararupa">पररूपसन्धिः</a>: प्र + एधते -> प्रेधते</li>
-                        <li><a href="sandhi-special-cases.html#prakritibhava">प्रकृतिभावः</a>: द्वे + अपि -> द्वे अपि</li>
-                        <li><a href="sandhi-special-cases.html">Exception details and story examples</a></li>
+                        <li><a href="yantavant-sandhi.html">यान्तवान्त story words</a></li>
+                        <li><a href="sandhi-special-cases.html">Special sandhi cases</a></li>
                     </ul>
                 </article>
             </div>
@@ -563,6 +475,7 @@
     <footer>
         <div class="wrap">
             Source notes: <a href="maheshwara-sutras.html">महेश्वरसूत्राणि</a>,
+            <a href="sandhi.html">sandhi map</a>,
             <a href="yantavant-sandhi.html">यान्तवान्त notes</a>,
             <a href="sandhi-special-cases.html">special-case notes</a>,
             <a href="shatru-shanach.html">शतृ-शानच् notes</a>, and

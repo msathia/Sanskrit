@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandhi Notes</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #1d252c;
+            --muted: #5f6b76;
+            --line: #d9e0e6;
+            --paper: #fbfaf7;
+            --panel: #ffffff;
+            --soft-blue: #e8f1f6;
+            --soft-green: #e9f3ee;
+            --soft-gold: #f5edd8;
+            --accent: #245c73;
+            --shadow: 0 12px 28px rgba(29, 37, 44, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.55;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        header {
+            background: #173344;
+            color: #f8fbfc;
+            border-bottom: 5px solid #d2a64b;
+        }
+
+        .wrap {
+            width: min(1040px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.95rem;
+        }
+
+        nav a {
+            color: #eef6f8;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            padding: 42px 0 40px;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: 2.35rem;
+            line-height: 1.1;
+        }
+
+        .lede {
+            max-width: 780px;
+            color: #dce9ee;
+            font-size: 1.08rem;
+            margin: 0;
+        }
+
+        main {
+            padding: 34px 0 64px;
+        }
+
+        section {
+            margin: 0 0 38px;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 1.55rem;
+            color: #243847;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 1.05rem;
+            color: #22313d;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
+        .section-note {
+            margin: 0 0 20px;
+            max-width: 780px;
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            min-width: 0;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .rule-card {
+            background: var(--soft-green);
+            box-shadow: none;
+        }
+
+        .note-card {
+            background: var(--soft-blue);
+            box-shadow: none;
+        }
+
+        .memory-card {
+            background: var(--soft-gold);
+            box-shadow: none;
+        }
+
+        .rule {
+            margin: 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(29, 37, 44, 0.08);
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+            font-size: 0.94rem;
+            line-height: 1.55;
+            white-space: pre;
+        }
+
+        .sanskrit {
+            font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Kohinoor Devanagari", serif;
+        }
+
+        .sutra-ref {
+            margin: -2px 0 12px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+
+        .sutra-ref a {
+            font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Kohinoor Devanagari", serif;
+        }
+
+        .example-list {
+            display: grid;
+            gap: 8px;
+            margin: 12px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .example-list li {
+            padding: 9px 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.7);
+            font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Kohinoor Devanagari", serif;
+        }
+
+        footer {
+            padding: 24px 0 36px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 780px) {
+            .wrap {
+                width: min(1040px, calc(100% - 96px));
+            }
+
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px 12px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.78rem;
+            }
+
+            .lede {
+                max-width: 28ch;
+                font-size: 0.98rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .wrap {
+                width: min(294px, calc(100% - 32px));
+                margin-left: 16px;
+                margin-right: auto;
+            }
+
+            .section-note {
+                max-width: 28ch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <div class="topbar">
+                <div class="brand">Sanskrit Study Notes</div>
+                <nav aria-label="Main navigation">
+                    <a href="index.html">Overview</a>
+                    <a href="maheshwara-sutras.html">Sutras</a>
+                    <a href="sandhi.html">Sandhi</a>
+                    <a href="shatru-shanach.html">शतृ-शानच्</a>
+                    <a href="Workflow.md">Workflow</a>
+                </nav>
+            </div>
+            <div class="intro">
+                <h1 lang="sa-Deva">सन्धिः</h1>
+                <p class="lede">Rule-application notes for sound changes. The Maheshwara Sutras page keeps the sound
+                    groups and प्रत्याहार notation; this page keeps the places where those sound groups change in use.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap">
+            <h2>Study Map</h2>
+            <p class="section-note">Sandhi notes are grouped by the kind of sound being changed. Vowel sandhi is current;
+                visarga and consonant sandhi are the next areas to grow.</p>
+            <div class="grid">
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">अच्सन्धिः</h3>
+                    <p>Vowel sandhi: one vowel meets another vowel.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">अच् = vowels
+अच् + अच् -> vowel sandhi rules</pre>
+                    <ul class="example-list">
+                        <li>सवर्णदीर्घ, गुण, वृद्धि, यण्</li>
+                        <li><a href="yantavant-sandhi.html">यान्तवान्तसन्धिः</a></li>
+                        <li><a href="sandhi-special-cases.html">पूर्वरूप, पररूप, प्रकृतिभाव</a></li>
+                    </ul>
+                </article>
+                <article class="card note-card">
+                    <h3 lang="sa-Deva">विसर्गसन्धिः</h3>
+                    <p>Upcoming: rules for final visarga before vowels and consonants.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">ः + next sound
+-> visarga change or retention</pre>
+                    <ul class="example-list">
+                        <li>Next topic area</li>
+                        <li>Keep separate from अच्सन्धिः</li>
+                    </ul>
+                </article>
+                <article class="card memory-card">
+                    <h3 lang="sa-Deva">हल्सन्धिः</h3>
+                    <p>Future consonant sandhi: one consonant meets another sound and changes by contact.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">हल् = consonants
+हल् + sound -> consonant sandhi rules</pre>
+                    <ul class="example-list">
+                        <li>Future topic area</li>
+                        <li>Use the sound groups from the Sutras page</li>
+                    </ul>
+                </article>
+                <article class="card note-card">
+                    <h3>Verb And Word Rules</h3>
+                    <p>Verb-derived forms and प्रत्यय rules stay outside the sandhi hub.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">लट्लकारः
+शतृ / शानच्
+other verb forms</pre>
+                    <ul class="example-list">
+                        <li><a href="shatru-shanach.html">शतृ-शानच् notes</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <h2 lang="sa-Deva">अच्सन्धिः</h2>
+            <p class="section-note">अच्सन्धिः means vowel sandhi. It happens when one vowel meets another vowel, usually
+                at a word boundary or inside a compound.</p>
+            <div class="grid">
+                <article class="card rule-card">
+                    <h3>सवर्णदीर्घसन्धिः</h3>
+                    <p class="sutra-ref">अष्टाध्यायी:
+                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.101.html" target="_blank"
+                            rel="noopener noreferrer">६.१.१०१ अकः सवर्णे दीर्घः</a>
+                    </p>
+                    <pre class="rule sanskrit" lang="sa-Deva">अ + अ / आ -> आ
+इ / ई + इ / ई -> ई
+उ / ऊ + उ / ऊ -> ऊ</pre>
+                    <ul class="example-list">
+                        <li>राम + अवतारः -> रामावतारः</li>
+                        <li>गिरि + ईशः -> गिरीशः</li>
+                        <li>गुरु + उपदेशः -> गुरूपदेशः</li>
+                    </ul>
+                </article>
+                <article class="card rule-card">
+                    <h3>गुणसन्धिः</h3>
+                    <p class="sutra-ref">अष्टाध्यायी:
+                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.87.html" target="_blank"
+                            rel="noopener noreferrer">६.१.८७ आद्गुणः</a>
+                    </p>
+                    <pre class="rule sanskrit" lang="sa-Deva">अ / आ + इ / ई -> ए
+अ / आ + उ / ऊ -> ओ
+अ / आ + ऋ / ॠ -> अर्</pre>
+                    <ul class="example-list">
+                        <li>देव + इन्द्रः -> देवेन्द्रः</li>
+                        <li>महा + ईश्वरः -> महेश्वरः</li>
+                        <li>महा + उत्सवः -> महोत्सवः</li>
+                        <li>महा + ऋषिः -> महर्षिः</li>
+                    </ul>
+                </article>
+                <article class="card rule-card">
+                    <h3>वृद्धिसन्धिः</h3>
+                    <p class="sutra-ref">अष्टाध्यायी:
+                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.88.html" target="_blank"
+                            rel="noopener noreferrer">६.१.८८ वृद्धिरेचि</a>
+                    </p>
+                    <pre class="rule sanskrit" lang="sa-Deva">अ / आ + ए / ऐ -> ऐ
+अ / आ + ओ / औ -> औ</pre>
+                    <ul class="example-list">
+                        <li>सदा + एव -> सदैव</li>
+                        <li>तथा + एव -> तथैव</li>
+                        <li>महा + ऐश्वर्यम् -> महैश्वर्यम्</li>
+                        <li>महा + औषधम् -> महौषधम्</li>
+                    </ul>
+                </article>
+                <article class="card rule-card">
+                    <h3>यण्सन्धिः</h3>
+                    <p class="sutra-ref">अष्टाध्यायी:
+                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.77.html" target="_blank"
+                            rel="noopener noreferrer">६.१.७७ इको यणचि</a>
+                    </p>
+                    <pre class="rule sanskrit" lang="sa-Deva">इ / ई + vowel -> य् + vowel
+उ / ऊ + vowel -> व् + vowel
+ऋ / ॠ + vowel -> र् + vowel
+ऌ + vowel -> ल् + vowel</pre>
+                    <ul class="example-list">
+                        <li>यदि + अपि -> यद्यपि</li>
+                        <li>इति + एवम् -> इत्येवम्</li>
+                        <li>सु + आगतम् -> स्वागतम्</li>
+                        <li>गुरु + आज्ञा -> गुर्वाज्ञा</li>
+                        <li>पितृ + आदेशः -> पित्रादेशः</li>
+                    </ul>
+                </article>
+                <article class="card rule-card">
+                    <h3><a href="yantavant-sandhi.html">यान्तवान्तसन्धिः</a></h3>
+                    <p class="sutra-ref">अष्टाध्यायी:
+                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.78.html" target="_blank"
+                            rel="noopener noreferrer">६.१.७८ एचोऽयवायावः</a>
+                    </p>
+                    <pre class="rule sanskrit" lang="sa-Deva">ए + vowel, except short अ -> अय् + vowel
+ऐ + vowel -> आय् + vowel
+ओ + vowel, except short अ -> अव् + vowel
+औ + vowel -> आव् + vowel</pre>
+                    <ul class="example-list">
+                        <li>द्वौ + अपि -> द्वावपि</li>
+                        <li>सर्वे + आगताः -> सर्वयागताः</li>
+                        <li>ए/ओ + short अ uses <a href="sandhi-special-cases.html#purvarupa">पूर्वरूपसन्धिः</a></li>
+                        <li><a href="yantavant-sandhi.html">Story words and meanings</a></li>
+                    </ul>
+                </article>
+                <article class="card rule-card">
+                    <h3><a href="sandhi-special-cases.html">Special Cases</a></h3>
+                    <p class="sutra-ref">अष्टाध्यायी:
+                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.109.html" target="_blank"
+                            rel="noopener noreferrer">६.१.१०९ एङः पदान्तादति</a>,
+                        <a href="https://ashtadhyayi-lite.github.io/sutra/6.1.89.html" target="_blank"
+                            rel="noopener noreferrer">६.१.८९ एत्येधत्यूठ्सु</a>,
+                        <a href="https://ashtadhyayi-lite.github.io/sutra/1.1.11.html" target="_blank"
+                            rel="noopener noreferrer">१.१.११ ईदूदेद्द्विवचनं प्रगृह्यम्</a>,
+                        <a href="https://avg-sanskrit.org/sutras/6-1-125.html" target="_blank"
+                            rel="noopener noreferrer">६.१.१२५ प्लुतप्रगृह्या अचि</a>
+                    </p>
+                    <pre class="rule sanskrit" lang="sa-Deva">ए + short अ -> एऽ
+ओ + short अ -> ओऽ
+अ + ए -> ए
+ऽ marks the dropped अ</pre>
+                    <ul class="example-list">
+                        <li><a href="sandhi-special-cases.html#purvarupa">पूर्वरूपसन्धिः</a>: हरे + अत्र -> हरेऽत्र</li>
+                        <li><a href="sandhi-special-cases.html#pararupa">पररूपसन्धिः</a>: प्र + एधते -> प्रेधते</li>
+                        <li><a href="sandhi-special-cases.html#prakritibhava">प्रकृतिभावः</a>: द्वे + अपि -> द्वे अपि</li>
+                        <li><a href="sandhi-special-cases.html">Exception details and story examples</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            Back to <a href="index.html">overview</a>. Use <a href="maheshwara-sutras.html">महेश्वरसूत्राणि</a> for
+            sound groups and प्रत्याहार memory. Private course material is intentionally excluded.
+        </div>
+    </footer>
+</body>
+
+</html>
