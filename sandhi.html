@@ -275,8 +275,8 @@
     <main>
         <section class="wrap">
             <h2>Study Map</h2>
-            <p class="section-note">Sandhi notes are grouped by the kind of sound being changed. Vowel sandhi is current;
-                visarga and consonant sandhi are the next areas to grow.</p>
+            <p class="section-note">Sandhi notes are grouped by the kind of sound being changed. Vowel and visarga
+                sandhi are current; consonant sandhi is the next area to grow.</p>
             <div class="grid">
                 <article class="card rule-card">
                     <h3 lang="sa-Deva">अच्सन्धिः</h3>
@@ -291,11 +291,12 @@
                 </article>
                 <article class="card note-card">
                     <h3 lang="sa-Deva">विसर्गसन्धिः</h3>
-                    <p>Upcoming: rules for final visarga before vowels and consonants.</p>
+                    <p>Rules for final visarga before vowels and consonants.</p>
                     <pre class="rule sanskrit" lang="sa-Deva">ः + next sound
--> visarga change or retention</pre>
+-> ओ, र्, लोपः, श्/ष्/स्, or special sound</pre>
                     <ul class="example-list">
-                        <li>Next topic area</li>
+                        <li>अः + अ -> ओऽ</li>
+                        <li>नमः + ते -> नमस्ते</li>
                         <li>Keep separate from अच्सन्धिः</li>
                     </ul>
                 </article>
@@ -317,6 +318,86 @@
 other verb forms</pre>
                     <ul class="example-list">
                         <li><a href="shatru-shanach.html">शतृ-शानच् notes</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap" id="visarga-sandhi">
+            <h2 lang="sa-Deva">विसर्गसन्धिः</h2>
+            <p class="section-note">विसर्गसन्धिः changes a final <span class="sanskrit"
+                    lang="sa-Deva">ः</span>. Check both sides: the sound before <span class="sanskrit"
+                    lang="sa-Deva">ः</span>, and the first sound of the next word.</p>
+            <div class="grid">
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">अः -> ओ</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">अः + अ -> ओऽ
+अः + soft consonant/semivowel -> ओ + soft consonant/semivowel</pre>
+                    <ul class="example-list">
+                        <li>गजः + अगच्छत् -> गजोऽगच्छत्</li>
+                        <li>बालः + रमते -> बालो रमते</li>
+                        <li>नः + मित्रः -> नो मित्रः</li>
+                    </ul>
+                </article>
+
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">विसर्गस्य लोपः</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">अः + vowel other than अ -> अ + vowel
+आः + vowel or soft consonant/semivowel -> आ + vowel or soft consonant/semivowel
+सः / एषः + sound other than अ -> स / एष + sound</pre>
+                    <ul class="example-list">
+                        <li>रामः + इति -> राम इति</li>
+                        <li>बालाः + आगच्छन्ति -> बाला आगच्छन्ति</li>
+                        <li>बालाः + गच्छन्ति -> बाला गच्छन्ति</li>
+                        <li>सः + पठति -> स पठति</li>
+                        <li>एषः + गच्छति -> एष गच्छति</li>
+                    </ul>
+                </article>
+
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">विसर्गस्य रत्वम्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">not अः / not आः + soft consonant/semivowel -> र् + soft consonant/semivowel
+not अः / not आः + vowel -> र् + vowel</pre>
+                    <ul class="example-list">
+                        <li>हरिः + अवदत् -> हरिरवदत्</li>
+                        <li>सिद्धिः + भवतु मे सदा -> सिद्धिर्भवतु मे सदा</li>
+                        <li>गुरुः + ब्रह्मा -> गुरुर्ब्रह्मा</li>
+                        <li>गुरुः + विष्णुः -> गुरुर्विष्णुः</li>
+                    </ul>
+                </article>
+
+                <article class="card rule-card">
+                    <h3>श् / ष् / स् Replacements</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">ः + स् / त् / थ् -> स् + स् / त् / थ्
+ः + श् / च् / छ् -> श् + श् / च् / छ्
+ः + ष् / ट् / ठ् -> ष् + ष् / ट् / ठ्</pre>
+                    <ul class="example-list">
+                        <li>नमः + ते -> नमस्ते</li>
+                        <li>कः + चन -> कश्चन</li>
+                        <li>रामः + षष्ठः -> रामष्षष्ठः</li>
+                    </ul>
+                </article>
+
+                <article class="card note-card">
+                    <h3>Special Visarga Sounds</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">ः + क् / ख् -> जिह्वामूलीयः
+ः + प् / फ् -> उपध्मानीयः</pre>
+                    <ul class="example-list">
+                        <li>रामः करोति: careful recitation uses जिह्वामूलीयः before क्</li>
+                        <li>रामः पठति: careful recitation uses उपध्मानीयः before प्</li>
+                        <li>These are often printed with the ordinary विसर्गः sign.</li>
+                    </ul>
+                </article>
+
+                <article class="card memory-card">
+                    <h3>Reading Joined Forms</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">एकोऽश्वोऽवसत्
+= एकः अश्वः अवसत्
+= one horse lived</pre>
+                    <ul class="example-list">
+                        <li>ऽ is अवग्रहः; it marks a missing short अ.</li>
+                        <li>एकोऽश्वः keeps अश्वः hidden inside the joined form.</li>
+                        <li>नमस्ते splits as नमः + ते.</li>
                     </ul>
                 </article>
             </div>
