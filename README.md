@@ -16,6 +16,7 @@ https://msathia.github.io/Sanskrit/
 - `yantavant-sandhi.html` - detailed rendered story-word notes for यान्तवान्तसन्धिः.
 - `sandhi-special-cases.html` - detailed rendered notes for पूर्वरूपसन्धिः, पररूपसन्धिः, and प्रकृतिभावः.
 - `shatru-shanach.html` - topic notes for शतृ, शानच्, and present participles.
+- `styles.css` - shared public page styles.
 - `Workflow.md` - terminal, tmux, and screenshot workflow notes.
 
 Local session context is kept in an ignored `SanskritNotes.md` file and is not published.
