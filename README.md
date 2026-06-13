@@ -12,6 +12,7 @@ https://msathia.github.io/Sanskrit/
 
 - `index.html` - public overview page with study-topic links and learning resources.
 - `maheshwara-sutras.html` - sound-map notes for महेश्वरसूत्राणि, प्रत्याहाराः, and हलन्तशब्दः.
+- `halanta-shabdaha.html` - short lesson notes for हलन्तशब्दाः and identifying अन्तः.
 - `sandhi.html` - sandhi rule hub for अच्सन्धिः, विसर्गसन्धिः, and future हल्सन्धिः.
 - `yantavant-sandhi.html` - detailed rendered story-word notes for यान्तवान्तसन्धिः.
 - `sandhi-special-cases.html` - detailed rendered notes for पूर्वरूपसन्धिः, पररूपसन्धिः, and प्रकृतिभावः.
