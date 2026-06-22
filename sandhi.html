@@ -33,8 +33,8 @@
     <main>
         <section class="wrap">
             <h2>Study Map</h2>
-            <p class="section-note">Sandhi notes are grouped by the kind of sound being changed. Vowel and visarga
-                sandhi are current; consonant sandhi is the next area to grow.</p>
+            <p class="section-note">Sandhi notes are grouped by the kind of sound being changed. Vowel, visarga, and
+                consonant sandhi each have their own rule area.</p>
             <div class="grid">
                 <article class="card rule-card">
                     <h3 lang="sa-Deva">अच्सन्धिः</h3>
@@ -59,12 +59,13 @@
                     </ul>
                 </article>
                 <article class="card memory-card">
-                    <h3 lang="sa-Deva">हल्सन्धिः</h3>
-                    <p>Future consonant sandhi: one consonant meets another sound and changes by contact.</p>
+                    <h3 lang="sa-Deva"><a href="#hal-sandhi">हल्सन्धिः</a></h3>
+                    <p>Consonant sandhi: a consonant meets another sound and changes by contact.</p>
                     <pre class="rule sanskrit" lang="sa-Deva">हल् = consonants
-हल् + sound -> consonant sandhi rules</pre>
+म् + consonant -> अनुस्वारसन्धिः</pre>
                     <ul class="example-list">
-                        <li>Future topic area</li>
+                        <li>अनुस्वारः: ं = ṃ</li>
+                        <li>चन्द्रबिन्दुः: ँ marks optional nasalization</li>
                         <li>Use the sound groups from the Sutras page</li>
                     </ul>
                 </article>
@@ -76,6 +77,93 @@
 other verb forms</pre>
                     <ul class="example-list">
                         <li><a href="shatru-shanach.html">शतृ-शानच् notes</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap" id="hal-sandhi">
+            <h2 lang="sa-Deva">हल्सन्धिः</h2>
+            <p class="section-note">हल्सन्धिः means consonant sandhi. This section starts with अनुस्वारसन्धिः, where a
+                final <span class="sanskrit" lang="sa-Deva">म्</span> changes before a following consonant sound.</p>
+            <div class="grid">
+                <article class="card note-card">
+                    <h3 lang="sa-Deva">अनुस्वारः</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">अनुस्वारः = ं = ṃ
+चन्द्रबिन्दुः = ँ
+अं / इं / उं = aṃ / iṃ / uṃ</pre>
+                    <ul class="example-list">
+                        <li>अनुस्वारः is the dot sign above a syllable.</li>
+                        <li>In these notes, the ordinary sandhi form uses ं.</li>
+                        <li>चन्द्रबिन्दुः is used only for the optional nasalized-semivowel notation below.</li>
+                    </ul>
+                </article>
+
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">म् -> ं</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">word-final म् + non-nasal consonant
+-> ं + non-nasal consonant
+nasal consonants: ङ् ञ् ण् न् म्</pre>
+                    <ul class="example-list">
+                        <li>फलम् + खादति -> फलं खादति</li>
+                        <li>किम् + करोति -> किं करोति</li>
+                        <li>ग्रामम् + गच्छति -> ग्रामं गच्छति</li>
+                        <li>रामम् + वन्दे -> रामं वन्दे</li>
+                        <li>अहम् + पठामि -> अहं पठामि</li>
+                    </ul>
+                </article>
+
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">वर्गीयव्यञ्जनम्</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">ं + क्/ख्/ग्/घ् -> ङ् + क्/ख्/ग्/घ्
+ं + च्/छ्/ज्/झ् -> ञ् + च्/छ्/ज्/झ्
+ं + ट्/ठ्/ड्/ढ् -> ण् + ट्/ठ्/ड्/ढ्
+ं + त्/थ्/द्/ध् -> न् + त्/थ्/द्/ध्
+ं + प्/फ्/ब्/भ् -> म् + प्/फ्/ब्/भ्</pre>
+                    <ul class="example-list">
+                        <li>Before a वर्गीयव्यञ्जनम्, अनुस्वारः can be shown as the fifth letter of that वर्गः.</li>
+                        <li>शम् + करः -> शंकरः -> शङ्करः</li>
+                        <li>ग्रामम् + गच्छति -> ग्रामं गच्छति; tightly joined: ग्रामङ्गच्छति</li>
+                    </ul>
+                </article>
+
+                <article class="card memory-card">
+                    <h3>Optional Nasalized Semivowel</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">ं + य् -> य्यँ  (ỹy)
+ं + व् -> व्वँ  (ṽv / ṽv)
+ं + ल् -> ल्लँ  (l̃l)</pre>
+                    <ul class="example-list">
+                        <li>चन्द्रबिन्दुः marks the optional nasalized semivowel.</li>
+                        <li>Do not write these as iy, iv, or il; those look like extra vowel sounds.</li>
+                        <li>सम् + वत्सरः -> संवत्सरः</li>
+                        <li>Optional notation: संवत्सरः -> सव्वँत्सरः; saṃvatsaraḥ -> saṽvatsaraḥ</li>
+                    </ul>
+                </article>
+
+                <article class="card memory-card">
+                    <h3>Joining And Splitting</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">फलम् + खादति -> फलं खादति
+फलं खादति -> फलम् + खादति
+
+शम् + करः -> शङ्करः
+शङ्करः -> शम् + करः</pre>
+                    <ul class="example-list">
+                        <li>First split the words.</li>
+                        <li>Check the final sound of the first word and the first sound of the next word.</li>
+                        <li>Then apply the local sound change.</li>
+                    </ul>
+                </article>
+
+                <article class="card note-card">
+                    <h3>Sound Groups To Keep Nearby</h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">क-वर्गः: क ख ग घ ङ
+च-वर्गः: च छ ज झ ञ
+ट-वर्गः: ट ठ ड ढ ण
+त-वर्गः: त थ द ध न
+प-वर्गः: प फ ब भ म</pre>
+                    <ul class="example-list">
+                        <li>The fifth sound of each वर्गः is its nasal sound.</li>
+                        <li>Use <a href="maheshwara-sutras.html">महेश्वरसूत्राणि</a> for the full sound map.</li>
                     </ul>
                 </article>
             </div>
@@ -277,7 +365,7 @@ not अः / not आः + vowel -> र् + vowel</pre>
         <div class="wrap">
             Back to <a href="index.html">overview</a>. Use <a href="maheshwara-sutras.html">महेश्वरसूत्राणि</a> for
             sound groups and प्रत्याहार memory. Private course material is intentionally excluded.
-            <div class="last-updated">Last updated: June 13, 2026</div>
+            <div class="last-updated">Last updated: June 22, 2026</div>
         </div>
     </footer>
 </body>
