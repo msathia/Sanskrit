@@ -62,10 +62,12 @@
                     <h3 lang="sa-Deva"><a href="#hal-sandhi">हल्सन्धिः</a></h3>
                     <p>Consonant sandhi: a consonant meets another sound and changes by contact.</p>
                     <pre class="rule sanskrit" lang="sa-Deva">हल् = consonants
-म् + consonant -> अनुस्वारसन्धिः</pre>
+म् + consonant -> अनुस्वारसन्धिः
+जश्त्व / पूर्वसवर्ण / ष्टुत्व -> consonant changes</pre>
                     <ul class="example-list">
                         <li>अनुस्वारः: ं = ṃ</li>
                         <li>चन्द्रबिन्दुः: ँ marks optional nasalization</li>
+                        <li>जश्त्व, पूर्वसवर्ण, and ष्टुत्व use the varga sound groups</li>
                         <li>Use the sound groups from the Sutras page</li>
                     </ul>
                 </article>
@@ -84,8 +86,8 @@ other verb forms</pre>
 
         <section class="wrap" id="hal-sandhi">
             <h2 lang="sa-Deva">हल्सन्धिः</h2>
-            <p class="section-note">हल्सन्धिः means consonant sandhi. This section starts with अनुस्वारसन्धिः, where a
-                final <span class="sanskrit" lang="sa-Deva">म्</span> changes before a following consonant sound.</p>
+            <p class="section-note">हल्सन्धिः means consonant sandhi. These rules show how a final consonant can
+                change when it meets the next sound.</p>
             <div class="grid">
                 <article class="card note-card">
                     <h3 lang="sa-Deva">अनुस्वारः</h3>
@@ -164,6 +166,67 @@ nasal consonants: ङ् ञ् ण् न् म्</pre>
                     <ul class="example-list">
                         <li>The fifth sound of each वर्गः is its nasal sound.</li>
                         <li>Use <a href="maheshwara-sutras.html">महेश्वरसूत्राणि</a> for the full sound map.</li>
+                    </ul>
+                </article>
+
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">पूर्वसवर्णसन्धिः</h3>
+                    <p>When a third varga letter is followed by <span class="sanskrit" lang="sa-Deva">ह्</span>,
+                        replace the <span class="sanskrit" lang="sa-Deva">ह्</span> with the fourth letter of that
+                        same varga.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">द् + ह् -> द् + ध्
+
+मरुत् + हरति
+-> मरुद् + हरति     (जश्त्व)
+-> मरुद्धरति        (पूर्वसवर्ण)
+
+अकस्मात् + हेयम्
+-> अकस्माद् + हेयम् (जश्त्व)
+-> अकस्माद्धेयम्    (पूर्वसवर्ण)</pre>
+                    <ul class="example-list">
+                        <li>जश्त्व first changes final त् to द् before the next sound.</li>
+                        <li>Then द् + ह् becomes द् + ध्.</li>
+                        <li>The same two-step pattern gives अकस्माद्धेयम्.</li>
+                    </ul>
+                </article>
+
+                <article class="card rule-card">
+                    <h3 lang="sa-Deva">जश्त्वसन्धिः</h3>
+                    <p>At a word boundary, a final non-nasal varga consonant becomes the third letter of its
+                        own varga before a vowel or soft following sound.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">क्/ख्/ग्/घ् -> ग्    च्/छ्/ज्/झ् -> ज्
+ट्/ठ्/ड्/ढ् -> ड्    त्/थ्/द्/ध् -> द्
+प्/फ्/ब्/भ् -> ब्
+
+सुहृत् + आनयति -> सुहृदानयति
+
+महत् + वनम्
+त् + व् -> द् + व्
+-> महद्वनम्
+
+रामो महद्वनं प्राविशत्।</pre>
+                    <ul class="example-list">
+                        <li>महत् = great; वनम् = forest.</li>
+                        <li>महद्वनम् = a great forest.</li>
+                        <li>सुहृत् + आनयति shows त् -> द् before the vowel आ.</li>
+                        <li>Split: रामः + महत् + वनम् + प्राविशत्।</li>
+                        <li>Meaning: “Rama entered the great forest.”</li>
+                    </ul>
+                </article>
+
+                <article class="card note-card">
+                    <h3 lang="sa-Deva">ष्टुत्वसन्धिः</h3>
+                    <p>When a dental sound meets a retroflex sound, the dental sound becomes the corresponding
+                        retroflex sound.</p>
+                    <pre class="rule sanskrit" lang="sa-Deva">स् त् थ् द् ध् न्
+-> ष् ट् ठ् ड् ढ् ण्
+
+मनस् + षष्ठः -> मनष्षष्ठः
+अस्मद् + डमरुः -> अस्मड्डमरुः</pre>
+                    <ul class="example-list">
+                        <li>Look for a dental sound beside ष् or a ट-वर्गः sound.</li>
+                        <li>मनस्: स् becomes ष् before ष्.</li>
+                        <li>अस्मद्: द् becomes ड् before ड्.</li>
                     </ul>
                 </article>
             </div>
@@ -365,7 +428,7 @@ not अः / not आः + vowel -> र् + vowel</pre>
         <div class="wrap">
             Back to <a href="index.html">overview</a>. Use <a href="maheshwara-sutras.html">महेश्वरसूत्राणि</a> for
             sound groups and प्रत्याहार memory. Private course material is intentionally excluded.
-            <div class="last-updated">Last updated: June 22, 2026</div>
+            <div class="last-updated">Last updated: August 29, 2026</div>
         </div>
     </footer>
 </body>
