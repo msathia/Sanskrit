@@ -24,13 +24,13 @@
             </div>
             <div class="intro">
                 <h1><span class="title-line">Practical Sanskrit</span> <span class="title-line">grammar notes</span></h1>
-                <p class="lede">A compact, push-safe notebook for learning Sanskrit grammar: sound groups, sandhi rules,
+                <p class="lede">A compact notebook for learning Sanskrit grammar: sound groups, sandhi rules,
                     and verb-derived forms. These notes are original summaries and examples, separate from private
                     course material.</p>
                 <div class="meta" aria-label="Study context">
                     <span class="pill">Pravesika 2 focus</span>
                     <span class="pill">Devanagari-first</span>
-                    <span class="pill">Static GitHub Pages site</span>
+                    <span class="pill">Rules with worked examples</span>
                 </div>
             </div>
         </div>
@@ -46,11 +46,13 @@
                     <h3><a href="maheshwara-sutras.html">Maheshwara Sutras</a></h3>
                     <pre class="rule">अच् = all vowels
 हल् = all consonants
-हलन्तशब्दः = consonant-ending word</pre>
+इक् = इ उ ऋ ऌ
+यण् = य् व् र् ल्</pre>
                     <ul class="example-list">
                         <li><a href="maheshwara-sutras.html">१४ महेश्वरसूत्राणि</a></li>
-                        <li>हल् starts at ह and ends at the final ल् marker</li>
-                        <li>यण् = य् व् र् ल्</li>
+                        <li>प्रत्याहारः: a starting sound plus an इत् marker names a sound group; the marker is excluded.</li>
+                        <li>Five-column varga grid: columns 1–2 are voiceless, 3–4 voiced, and 5 nasal.</li>
+                        <li>Vowels, semivowels, sibilants, and aspirated versus unaspirated sounds.</li>
                     </ul>
                 </article>
             </div>
@@ -62,12 +64,13 @@
 
             <div class="grid">
                 <article class="card note-card">
-                    <h3><a href="halanta-shabdaha.html">Halanta Lesson Notes</a></h3>
+                    <h3><a href="halanta-shabdaha.html">Consonant-Ending Stems</a></h3>
                     <pre class="rule">राम = अजन्तशब्दः
-जगत् = हलन्तशब्दः</pre>
+जगत् = हलन्तशब्दः
+कर्म → stem कर्मन् → नकारान्तः</pre>
                     <ul class="example-list">
-                        <li>Identify the base-stem ending</li>
-                        <li>जकारान्तः, नकारान्तः, सकारान्तः, षकारान्तः</li>
+                        <li>Identify the underlying stem, which may differ from the visible word ending.</li>
+                        <li>जकारान्तः, नकारान्तः, सकारान्तः, षकारान्तः; also भवत् vocative forms and नाम usage.</li>
                         <li><a href="halanta-shabdaha.html">हलन्तशब्दाः notes</a></li>
                     </ul>
                 </article>
@@ -76,28 +79,65 @@
 
         <section id="sandhi" class="wrap">
             <h2>सन्धिः</h2>
-            <p class="section-note">Sound-change rules now live on a dedicated sandhi page. This keeps the Sutras page
-                focused on sound groups and keeps rule applications in one place.</p>
+            <p class="section-note">Choose the sound being changed: a vowel, visarga, or consonant. Each topic
+                links to rules, worked examples, and exceptions.</p>
 
             <div class="grid">
                 <article class="card rule-card">
-                    <h3><a href="sandhi.html">Sandhi Rule Hub</a></h3>
-                    <pre class="rule">अच्सन्धिः = vowel sandhi
-विसर्गसन्धिः = visarga sandhi
-हल्सन्धिः = consonant sandhi</pre>
+                    <h3><a href="sandhi.html#ach-sandhi">अच्सन्धिः — Vowel Sandhi</a></h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">गिरि + ईशः → गिरीशः
+देव + इन्द्रः → देवेन्द्रः
+सदा + एव → सदैव</pre>
                     <ul class="example-list">
-                        <li><a href="sandhi.html">Current vowel, visarga, and consonant sandhi map</a></li>
-                        <li>Visarga rules now have their own section</li>
-                        <li>Consonant sandhi starts with अनुस्वारसन्धिः</li>
+                        <li>सवर्णदीर्घ, गुण, वृद्धि, and यण्: vowel combinations and semivowel replacements.</li>
+                        <li><a href="sandhi.html#ach-sandhi">Vowel rules and सूत्र references</a></li>
+                    </ul>
+                </article>
+                <article class="card note-card">
+                    <h3><a href="sandhi.html#visarga-sandhi">विसर्गसन्धिः — Visarga Sandhi</a></h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">बालः + रमते → बालो रमते
+हरिः + अवदत् → हरिरवदत्
+नमः + ते → नमस्ते</pre>
+                    <ul class="example-list">
+                        <li>Check both the vowel before ः and the sound after it.</li>
+                        <li>ओ, र्, लोपः, श्/ष्/स् replacements, and special visarga sounds.</li>
+                        <li><a href="sandhi.html#visarga-sandhi">Conditions and joined-form practice</a></li>
+                    </ul>
+                </article>
+                <article class="card memory-card">
+                    <h3><a href="sandhi.html#hal-sandhi">हल्सन्धिः — Consonant Sandhi</a></h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">महत् + वनम् → महद्वनम्
+षट् + मयूराः → षण्मयूराः
+तद् + लयः → तल्लयः</pre>
+                    <ul class="example-list">
+                        <li>अनुस्वार and nasalization; जश्त्व, पूर्वसवर्ण, and ष्टुत्व.</li>
+                        <li><a href="sandhi.html#anunasika-sandhi">अनुनासिक:</a> own-varga nasal replacement is generally
+                            optional; mandatory before nasal-initial suffixes such as मय and मात्र.</li>
+                        <li><a href="sandhi.html#latva-sandhi">लत्व:</a> dental sounds become ल् before ल्;
+                            न् becomes nasalized ल्, not ङ्.</li>
                     </ul>
                 </article>
                 <article class="card rule-card">
-                    <h3><a href="yantavant-sandhi.html">Current Detail Pages</a></h3>
-                    <pre class="rule">यान्तवान्तसन्धिः
-पूर्वरूप / पररूप / प्रकृतिभाव</pre>
+                    <h3><a href="yantavant-sandhi.html">यान्तवान्तसन्धिः — Worked Words</a></h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">ए → अय्    ऐ → आय्
+ओ → अव्    औ → आव्
+विष्णो + इति → विष्णविति</pre>
                     <ul class="example-list">
-                        <li><a href="yantavant-sandhi.html">यान्तवान्त story words</a></li>
-                        <li><a href="sandhi-special-cases.html">Special sandhi cases</a></li>
+                        <li>Replacements before a following vowel; ए/ओ before short अ use पूर्वरूप instead.</li>
+                        <li><a href="yantavant-sandhi.html">Step-by-step story words, meanings, and a Tamil memory hook</a></li>
+                    </ul>
+                </article>
+                <article class="card note-card">
+                    <h3><a href="sandhi-special-cases.html">Vowel Sandhi Exceptions</a></h3>
+                    <pre class="rule sanskrit" lang="sa-Deva">हरे + अत्र → हरेऽत्र
+द्वे + अपि → द्वे अपि</pre>
+                    <ul class="example-list">
+                        <li><a href="sandhi-special-cases.html#purvarupa">पूर्वरूप:</a> ए/ओ before short अ;
+                            ऽ marks the dropped अ.</li>
+                        <li><a href="sandhi-special-cases.html#pararupa">पररूप:</a> the later vowel remains
+                            in specific prefix contexts.</li>
+                        <li><a href="sandhi-special-cases.html#prakritibhava">प्रकृतिभाव:</a> blocked sandhi in
+                            protected forms, including certain dual forms and pluta vowels.</li>
                     </ul>
                 </article>
             </div>
@@ -110,11 +150,13 @@
             <div class="grid">
                 <article class="card rule-card">
                     <h3><a href="shatru-shanach.html">Participles From लट्लकारः</a></h3>
-                    <pre class="rule">ति-ending forms -> often शतृ
-ते-ending forms -> often शानच्</pre>
+                    <pre class="rule">गायति → गायन् (शतृ)
+वन्दते → वन्दमानः (शानच्)
+रामः गायन् पचति।</pre>
                     <ul class="example-list">
-                        <li>शतृ and शानच् form present participles</li>
-                        <li>Use the verb ending to choose the प्रत्ययः</li>
+                        <li>“Rama cooks while singing”: a participle describes the person doing an action.</li>
+                        <li>परस्मैपद → शतृ; आत्मनेपद → शानच् in the present-participle patterns studied here.</li>
+                        <li>Forms change with gender, number, and case: धरन्ती, धरन्तः, आरभमाणस्य.</li>
                         <li><a href="shatru-shanach.html">शतृ and शानच् notes</a></li>
                     </ul>
                 </article>
@@ -133,7 +175,7 @@
 ईक्षते → ऐक्षत
 संवर्तते → समवर्तत</pre>
                     <ul class="example-list">
-                        <li>लट् = present; लङ् = past</li>
+                        <li>लट् = present; लङ् = past. Add अ before the verbal base, after any उपसर्गः.</li>
                         <li>अ + अ → आ; अ + इ/ई/ए → ऐ; अ + उ/ऊ → औ</li>
                         <li><a href="atmanepada-lang.html">लङ्लकारः notes and examples</a></li>
                     </ul>
@@ -203,7 +245,7 @@
             <a href="sandhi-special-cases.html">special-case notes</a>,
             <a href="shatru-shanach.html">शतृ-शानच् notes</a>,
             <a href="atmanepada-lang.html">आत्मनेपद लङ् notes</a>. Private course material is intentionally excluded.
-            <div class="last-updated">Last updated: August 29, 2026</div>
+            <div class="last-updated">Last updated: September 11, 2026</div>
         </div>
     </footer>
 </body>
