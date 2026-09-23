@@ -391,3 +391,40 @@ footer {
         padding: 9px 8px;
     }
 }
+
+/* Lakara comparison: keep scripts readable and scroll the table on small screens. */
+.lakara-table { min-width: 720px; }
+.lakara-table caption { text-align: left; padding: 0 0 12px; color: var(--muted); }
+.lakara-table th[scope="row"] { white-space: nowrap; }
+.lakara-table td[lang="sa-Deva"] { white-space: nowrap; font-size: 1.15rem; }
+.lakara-table td[lang="ta"] { line-height: 1.8; min-width: 230px; }
+.lakara-card .table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.lakara-card details { margin-top: 18px; }
+
+/* Unified verb overview: reference first, then related study cards. */
+.topic-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 20px; }
+.verb-topic-grid { margin-top: 20px; }
+.verb-topic-grid .verb-meaning { margin-top: 12px; }
+#verbs [id] { scroll-margin-top: 20px; }
+#verbs [lang="ta"] { line-height: 1.8; }
+
+/* Full verb paradigms: accessible text tables with a consistent person/number grid. */
+body.page-verbs { --wrap-max: 1120px; }
+.conjugation-stack { display: grid; gap: 20px; }
+.conjugation-card { background: var(--panel); box-shadow: none; }
+.conjugation-table { min-width: 620px; }
+.conjugation-table caption { text-align: left; color: var(--muted); padding-bottom: 12px; }
+.conjugation-table th, .conjugation-table td { border: 1px solid var(--line); vertical-align: middle; }
+.conjugation-table thead th, .conjugation-table th[scope="row"] { background: var(--soft-gold); color: #542847; }
+.conjugation-table td { text-align: center; font-family: "Noto Serif Devanagari", "Kohinoor Devanagari", serif; font-size: 1.35rem; line-height: 1.8; white-space: nowrap; }
+.chart-meaning { margin-top: 14px; }
+.chart-meaning [lang="ta"] { line-height: 1.8; }
+.chart-links { margin-top: 20px; }
+.page-verbs [id] { scroll-margin-top: 20px; }
+.conjugation-card .table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 780px) { .page-verbs .wrap { width: calc(100% - 32px); margin-left: auto; margin-right: auto; } }
+
+/* English sentence meanings paired with each Sanskrit conjugation. */
+.conjugation-table .form-meaning { display: block; margin-top: 6px; font-family: system-ui, sans-serif; font-size: 0.9rem; font-weight: 400; line-height: 1.5; color: var(--muted); white-space: normal; }
+.conjugation-table { table-layout: fixed; width: 100%; }
+.conjugation-table th:first-child { width: 24%; }

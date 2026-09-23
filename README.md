@@ -11,6 +11,7 @@ https://msathia.github.io/Sanskrit/
 ## Contents
 
 - `index.html` - public overview page with study-topic links and learning resources.
+- `verbs.html` - unified verb reference and ten full लभ् conjugation charts, with English sentences for all 90 forms and Tamil summary aids.
 - `maheshwara-sutras.html` - sound-map notes for महेश्वरसूत्राणि, प्रत्याहाराः, and हलन्तशब्दः.
 - `halanta-shabdaha.html` - short lesson notes for हलन्तशब्दाः and identifying अन्तः.
 - `sandhi.html` - sandhi rule hub for अच्सन्धिः, विसर्गसन्धिः, and हल्सन्धिः.
