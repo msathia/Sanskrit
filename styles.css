@@ -35,11 +35,11 @@ body {
 
 body.page-home {
     --wrap-max: 1120px;
-    --intro-max: 760px;
+    --intro-max: none;
     --intro-padding: 46px 0 42px;
     --h1-size: 2.6rem;
     --h1-line-height: 1.08;
-    --lede-max: 720px;
+    --lede-max: none;
     --section-bottom: 42px;
     --h2-size: 1.65rem;
 }
@@ -437,3 +437,5 @@ body.page-verbs { --wrap-max: 1120px; }
 .gita-motto a { color: #e5eff3; }
 .gita-motto .motto-study-link { display: inline-block; }
 .verse-example { font-size: clamp(1.35rem, 3vw, 1.9rem); color: #542847; }
+
+.page-home .lede { max-width: var(--lede-max); }
