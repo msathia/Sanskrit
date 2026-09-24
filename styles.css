@@ -430,11 +430,10 @@ body.page-verbs { --wrap-max: 1120px; }
 .conjugation-table th:first-child { width: 24%; }
 
 /* Opening verse and its worked grammar example. */
-.gita-motto { margin: 0; padding: 36px 0 30px; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
+.gita-motto { margin: 0; padding: 20px 0; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
 .gita-motto blockquote, .verse-example { margin: 0; font-family: "Noto Serif Devanagari", "Kohinoor Devanagari", serif; font-size: clamp(1.55rem, 3.5vw, 2.65rem); line-height: 1.7; }
-.gita-motto blockquote { color: #f3d68f; }
-.gita-motto p { margin: 10px 0; font-size: 1.1rem; }
-.gita-motto figcaption { color: #d9e7ed; font-size: 0.95rem; }
+.gita-motto blockquote { color: #f3d68f; font-size: clamp(1.4rem, 2.8vw, 2rem); line-height: 1.5; }
+.gita-motto .motto-details { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 8px 28px; margin-top: 12px; color: #d9e7ed; font-size: 0.85rem; line-height: 1.5; }
 .gita-motto a { color: #e5eff3; }
-.gita-motto .motto-study-link { display: inline-block; margin-top: 16px; font-size: 0.9rem; }
+.gita-motto .motto-study-link { display: inline-block; }
 .verse-example { font-size: clamp(1.35rem, 3vw, 1.9rem); color: #542847; }
